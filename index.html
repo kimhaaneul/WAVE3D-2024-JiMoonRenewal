@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <title>AI지문분석</title>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+
+    <main>
+    <section>
+        <div class="eventbanner">
+            <div class="banner">
+            <img src="/img/event1.png">
+            </div>
+            <div class="banner">
+            <img src="/img/event2.png">
+            </div>
+            <div class="banner">
+            <img src="/img/event3.png">
+            </div>          
+        </div>
+    </section>
+
+    <section id="contantbox">
+            <div id="imgbox">
+                <img src="/img/main지문1.png">
+            </div>
+            <div id="contanttextbox">
+                <div>
+                    <img src="/img/main지문2.png">
+                </div>
+                
+                <h3>지문을 찍는 것만으로</h3>
+                <h3>나의 성격과 적성을 알 수 있어요!</h3>
+                <h2>내 지문 유형은?</h2>
+                <br>
+                <h3>나의 타고난 성격과 적성에 맞는 진로를 찾아보세요!</h3>
+                <br>
+                <br>
+            <button id="jimoonbtn">
+                바로가기
+            </button>
+        </div>
+    </section>
+
+        <section id="contantbox2">
+        <div id="textbox">
+            <div>
+                <img src="/img/따옴표1.png">
+            </div>
+            <h2>정확한 지문 진단과 분석을 통한</h2><br>     
+            <h2>나만의 지문유형 11가지 분석!</h2>
+            <div>
+                <img src="/img/따옴표2.png">
+            </div>  
+        </div>
+
+        <div class="container">
+            <div id="btn-box">
+            <button type="button" id="left-button">
+                <img src="/img/왼쪽화살표.png" alt="#">
+            </button>
+            </div>
+
+            <div class="jimoonbox">
+                <img src="/img/창도형.png">
+                <img src="/img/사추형.png">
+                <img src="/img/열리형.png">
+                <img src="/img/완추형.png">
+                <img src="/img/중추형.png">
+                <img src="/img/규성형.png">
+                <img src="/img/감추형.png">
+                <img src="/img/대활형.png">
+                <img src="/img/박헌형.png">
+                <img src="/img/자예형.png">
+                <img src="/img/독연형.png">      
+            </div>
+            
+            <div id="btn-box">
+            <button type="button" id="right-button">
+                <img src="/img/오른쪽화살표.png" alt="#">
+            </button>
+            </div>
+        </div>
+    
+    </section>
+
+    
+
+    </main>
+    <footer id="footer-container"></footer>
+   
+</body>
+
+<script src="/js/index.js"></script>
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+</html>

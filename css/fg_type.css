@@ -1,0 +1,63 @@
+* {
+    margin :0;
+    font-family: "Pretendard Light","Pretendard Medium","Pretendard Regular",
+    "Pretendard SemiBold","Pretendard Regular","Pretendard Bold","Pretendard ExtraBold";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+li {
+    list-style: none;
+  list-style: none;
+}
+
+/* =-========== 기본설정 끝! ============*/
+
+#contant1, #contant2{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#jm-contant-box1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20%;
+    align-items: center;
+    margin-bottom: 2%;
+
+  }
+
+  #jm-contant-box1 img{
+    width: 80%;
+  }
+
+  #jm-contant-box1 h2{
+    color : #E95305;
+    font-family: "Pretendard SemiBold";
+    text-align: center;
+    align-items: center;
+    margin-left: 15pt;
+    font-size: 30pt;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 20px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.image-grid img {
+    margin-bottom: 20px;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

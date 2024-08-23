@@ -1,0 +1,349 @@
+* {
+    margin :0;
+    padding: 0;
+    font-family: "Pretendard Thin","Pretendard Light","Pretendard Medium","Pretendard Regular",
+    "Pretendard SemiBold","Pretendard Regular";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* =-========== 기본설정 끝! ============*/
+
+  #content1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    
+}
+
+
+#content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+
+#content3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+#jm-content-box1{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 36%;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+
+  #jm-content-box1 img{
+    width: 80%;
+  }
+
+  #jm-content-box1 h2{
+    color : #E95305;
+    font-family: "Pretendard SemiBold";
+    text-align: center;
+    align-items: center;
+    margin-left: 10pt;
+    font-size: 30pt;
+}
+
+#jm-content-box2{
+    display: flex;
+    margin-right: 44%;    
+}
+
+#jm-content-box3{
+    width: 5px;
+    background-color : #E95305;
+    height: 26px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* =========== 프로그램 소개 테이블 ========== */
+
+#fg_pg_table1,
+#fg_pg_table2{
+    width: 700px;
+    border-collapse: collapse;
+    margin: 20px;
+    border: none;
+}
+
+#fg_pg_table1 th,td,
+#fg_pg_table2 th,td{
+    border: 1px solid #d1d1d1;
+    padding: 15px;
+    text-align: center;
+    font-family: "Pretendard Medium";
+}
+
+
+#fg_pg_table1 td,
+#fg_pg_table2 td{
+    padding: 15px;
+    line-height: 1.5;
+ }
+
+
+ #fg_pg_table2 th:first-child, 
+ #fg_pg_table2 td:first-child {
+     width: 130px;
+ }
+
+
+#fg_pg_table2 th:last-child, 
+#fg_pg_table2 td:last-child {
+    width: 90px; 
+}
+
+
+#fg_pg_table1 th{
+    border-top: none;
+    border-color: #ffffff;
+    background-color: #E95305;
+    color : #ffffff;
+}
+
+
+#fg_pg_table2 th{
+    border-top: none;
+    border-color: #ffffff;
+    background-color: #68a5ff;
+    color : #ffffff;
+}
+
+
+#fg_pg_table1 td:first-child,
+#fg_pg_table2 td:first-child{
+    font-family: "Pretendard SemiBold";
+ }
+
+#fg_pg_table1 td:first-child, 
+#fg_pg_table1 th:first-child,
+#fg_pg_table2 td:first-child, 
+#fg_pg_table2 th:first-child {
+    border-left: none;
+}
+
+#fg_pg_table1 td:last-child, 
+#fg_pg_table1 th:last-child,
+#fg_pg_table2 td:last-child, 
+#fg_pg_table2 th:last-child {
+    border-right: none;
+}
+
+#fg_pg_table1 th:first-child,
+#fg_pg_table2 th:first-child {
+    border-top-left-radius: 20px;
+}
+
+#fg_pg_table1 th:last-child,
+#fg_pg_table2 th:last-child {
+    border-top-right-radius: 20px;
+}
+
+
+
+/* ======= 취업 캠프 ======== */
+
+#content3 #jm-content-box2{
+    margin-bottom: 20px;
+}
+
+
+
+#fg-pg-box1{
+   display: flex;
+   margin-top: 20px;
+   width: 700px;
+   height: auto;
+   background-color: #f7f7f7;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px;
+}
+
+#fg-pg-box3{
+    width: 200px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    background-color: #ff8e51;
+    margin-right: 29%;
+    margin-bottom: -4%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #ffffff;
+}
+
+
+#fg-pg-box3 span{
+    font-size: 18pt;
+    font-family: "Pretendard SemiBold";
+    color: #131313;
+    text-align: center;
+}
+
+#fg-pg-icon{
+    margin-top: 75px;
+    margin-left : 30px;
+    margin-right: 30px;
+
+}
+
+#fg-pg-line{
+    height: 200px;
+    border: none;
+    border: 1px solid #ffffff;
+    margin: 20px;
+}
+
+#fg-pg-box2{
+    color: #1b1b1b;
+}
+
+#fg-pg-box2 ul{
+    list-style-type: disc;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#fg-pg-box2 li{
+    margin-bottom: 7px;
+    line-height: 1.4;
+    text-align: left;
+    font-family: "Pretendard Medium";
+}
+
+/* =========== 힐링 캠프 =========== */
+#fg-pg-line2{
+    height: 100px;
+    border: none;
+    border: 1px solid #ffffff;
+    margin: 20px;
+}
+
+#fg-pg-icon2{
+    margin: 30px;
+}
+
+#content3-list-li{
+    margin-bottom: 30px;
+}
+
+/*  test */
+#fg_pg_table3,
+#fg_pg_table4{
+    width: 700px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border: none;
+}
+
+#fg_pg_table3 th,td,
+#fg_pg_table4 th,td{
+    border: 1px solid #d1d1d1;
+    padding: 15px;
+    font-family: "Pretendard Medium";
+}
+
+#fg_pg_table3 td:first-child,
+#fg_pg_table4 td:first-child{
+    text-align: center;
+}
+
+#fg_pg_table3 td,li,
+#fg_pg_table4 td,li{
+    text-align: left;
+    color: #131313;
+    font-family: "Pretendard Medium";
+}
+
+#fg_pg_table3 td,
+#fg_pg_table4 td{
+    padding: 15px;
+    line-height: 1.5;
+ }
+
+
+ #fg_pg_table3 th:first-child, 
+ #fg_pg_table4 td:first-child {
+     width: 150px;
+ }
+
+
+
+#fg_pg_table3 th{
+    border-top: none;
+    border-color: #ffffff;
+    background-color: #ff4848;
+    color : #ffffff;
+    font-size: 18pt;
+}
+
+
+#fg_pg_table4 th{
+    border-top: none;
+    border-color: #ffffff;
+    background-color: #66d362;
+    color : #ffffff;
+    font-size: 18pt;
+}
+
+
+#fg_pg_table3 td:first-child,
+#fg_pg_table4 td:first-child{
+    font-family: "Pretendard SemiBold";
+ }
+
+#fg_pg_table3 td:first-child, 
+#fg_pg_table3 th:first-child,
+#fg_pg_table4 td:first-child, 
+#fg_pg_table4 th:first-child {
+    border-left: none;
+}
+
+#fg_pg_table3 td:last-child, 
+#fg_pg_table3 th:last-child,
+#fg_pg_table4 td:last-child, 
+#fg_pg_table4 th:last-child {
+    border-right: none;
+}
+
+#fg_pg_table3 th:first-child,
+#fg_pg_table4 th:first-child {
+    border-top-left-radius: 20px;
+}
+
+#fg_pg_table3 th:last-child,
+#fg_pg_table4 th:last-child {
+    border-top-right-radius: 20px;
+}
+
+

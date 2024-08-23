@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/companyhistory.css" />
+    <title>회사 연혁</title>
+</head>
+<body>
+    <main>
+    <div id="menu-container">
+    </div>
+
+    <div id="cp-textbox">
+        <h2>회사 연혁</h2>
+        </div>
+
+        <section id="contant1">
+            <div id="timeline">
+                <div id="vertical-line"></div>
+        
+                <ul class="timelinelist">
+                    <li> 
+                        <div class="timeline-event">   
+                            <div class="event-details-right">
+                                <span class="font-bold">08</span>
+                                <span class="font-bold">(주)웨이브쓰리디 설립</span>
+                                <p>Establishment of Wave 3D Co., Ltd.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot-left"></div>
+                        <div class="timeline-year-left">2015</div>
+                    </li>
+                    <br>
+
+                    <li>
+                        <div class="timeline-event"></div>   
+                        <div class="event-details-left">
+                            <span class="font-bold">벤처기업 선정</span>
+                            <span class="font-bold">06</span>
+                            <p>Selected as a Venture Business</p>
+                            <br>
+
+                            <span class="font-bold">국가 지역주력기술 개발 선정. 2년간 2억원 지원</span>
+                            <span class="font-bold">10</span>
+                            <p>Selection of national major technology development, support of 200 million won for two years</p>   
+                            <br>
+
+                            <span class="font-bold">전남 국방벤처기업 선정</span>
+                            <span class="font-bold">10</span>
+                            <p>Selection of Jeonnam Defense Venture Company</p>   
+                        </div>
+                        <div class="timeline-dot-right"></div>
+                        <div class="timeline-year-right">2016</div>
+                    </li>
+                    <br>
+
+                    <li> 
+                        <div class="timeline-event">   
+                            <div class="event-details-right">
+                                <span class="font-bold">11</span>
+                            <span class="font-bold">글로벌 IP스타기업 선정</span>
+                                <p>Global IP Star Company Selection</p>
+                            </div>
+                        </div>
+                        <span class="timeline-dot-left"></span>
+                        <div class="timeline-year-left">2017</div>
+                    </li>
+                    <br>
+
+                    <li>
+                        <div class="timeline-event"></div>   
+                        <div class="event-details-left">
+                            <span class="font-bold">2018년도 미국 CES 참가(라스베가스)</span>
+                            <span class="font-bold">04</span>
+                            <p>Participating in the 2018 US CES(Rasvegas)</p>
+                            <br>
+
+                            <span class="font-bold">지역특화기술개발 기업선정,(농작물 생장인식 드론 개발)</span>
+                            <span class="font-bold">07</span>
+                            <p>Selection of local specialized technology development enterprises, Two years worth 4.6 billion won(development of agricultural production growth-type drones)</p>   
+                            <br>
+
+                            <span class="font-bold">전남 국방벤처기업 선정</span>
+                            <span class="font-bold">10</span>
+                            <p>Selection of Jeonnam Defense Venture Company</p>   
+                        </div>
+                        <span class="timeline-dot-right"></span>
+                        <div class="timeline-year-right">2018</div>
+                    </li>
+                    <br>
+
+                    <li> 
+                        <div class="timeline-event">   
+                            <div class="event-details-right">
+                                <span class="font-bold">04</span>
+                                <span class="font-bold">호주(브리즈번, 시드니), 미국(애틀랜타), 캐나다(벤쿠버) 지사 설립</span>
+                                <p>Established Wave3D branches in Australia (Brisbane, Sydney), USA (Atlanta), and Canada (Vancouver).</p>
+                            </div>
+                        </div>
+                        <span class="timeline-dot-left"></span>
+                        <div class="timeline-year-left">2019</div>
+                    </li>
+                    <br>
+
+                    <li>
+                        <div class="timeline-event"></div>   
+                        <div class="event-details-left">
+                            <span class="font-bold">나주혁신산단 나주본사 착공식</span>
+                            <span class="font-bold">03</span>
+                            <p>Naju Innovation Industrial Complex Naju Main Building Construction Ceremony</p>
+                            <br>
+
+                            <span class="font-bold">AI 바우처 공급기업 선정</span>
+                            <span class="font-bold">07</span>
+                            <p>Selection of AI voucher supplier</p>   
+                            <br>
+
+                            <span class="font-bold">나주본사 확장 이전</span>
+                            <span class="font-bold">10</span>
+                            <p>SPrior to expansion of Naju headquarters</p>   
+                        </div>
+                        <span class="timeline-dot-right"></span>
+                        <div class="timeline-year-right">2020</div>
+                    </li>
+                    <br>
+
+                    <li> 
+                        <div class="timeline-event">   
+                            <div class="event-details-right">
+                                <span class="font-bold">03</span>
+                                <span class="font-bold">에너지특화기업선정</span>
+                                <p>Selection of energy-specialized companies</p>
+                            </div>
+                        </div>
+                        <span class="timeline-dot-left"></span>
+                        <div class="timeline-year-left">2021</div>
+                    </li>
+                    <br>
+                </ul>
+            </div>
+
+        </section>
+
+    
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer id="footer-container"></footer> 
+</body>
+
+<script src="/js/index.js"></script>
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+
+</html>

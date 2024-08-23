@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/join.css" />
+    <title>회원 가입</title>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+    <main>     
+            <div id="jointitle">
+                <h2>회원 가입</h2>
+            </div>
+
+            <section id="contant1">
+                <div id="join-line"></div>
+
+            <div class="joinform-container">
+                <h2>정보 입력</h2>
+                <form name="join" action="CMS_register_240821.php" method="post">
+                    <table id="join-table">
+                        <tr>
+                            <th><label for="username">아이디</label></th>
+                            <td><input type="text" name="id" class="memberId" placeholder="사용하실 아이디를 입력하세요."></td>
+                            <td><button type="button" value="중복확인" class="memberIdCheck" disabled>중복확인</button></td>
+                        </tr>
+                        <tr>
+                            <th><label for="password">비밀번호</label></th>
+                            <td><input type="password" id="password" placeholder="8-20자 / 영문 소문자,숫자,특수기호 2개이상을 입력해주세요."></td>
+                        </tr>
+                        <tr>
+                            <th><label for="password-confirm">비밀번호 확인</label></th>
+                            <td><input type="password" id="password-confirm" placeholder="8-20자 / 영문 소문자,숫자,특수기호 2개이상을 입력해주세요."></td>
+                        </tr>
+
+                        <tr class="email">
+                            <th><label for="email">이메일</label></th>
+                            <td>
+                                <input type="email" id="email" name="email1" placeholder="이메일을 입력해주세요." required>
+                                <span>@</span>
+                                <select id="email-domain-select" required>
+                                    <option value="" disabled selected>도메인 선택</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="daum.net">daum.net</option>
+                                    <option value="custom">직접 입력</option>
+                                </select>
+                                <input type="text" id="email-domain-input" placeholder="도메인을 입력해주세요." style="display: none;" />
+                            </td>
+                            <td><button type="button" id="send-code">인증번호 보내기</button>
+                                <input type="text" id="verify-code" placeholder="인증번호를 입력하세요" required></td>
+                            
+                        </tr>                      
+
+                        <tr>
+                            <th><label for="name">이름</label></th>
+                            <td><input type="text" id="name" placeholder="이름을 입력하세요."></td>
+                        </tr>
+                        <tr>
+                            <th><label for="phone">연락처</label></th>
+                            <td><input type="text" id="phone" placeholder="연락처를 입력하세요."></td>
+                            <td><button type="button" id="send-code">인증번호받기</button></td>                 
+                        </tr>
+                        <tr>
+                            <th><label for="postal-code">주소</label></th>
+                            <td><input type="text" id="postal-code" placeholder="우편번호"></td>
+                            <td><button type="button" id="join-btn">검색</button></td>
+                        </tr>
+                        <tr>
+                           <th></th>
+                            <td><input type="text" id="address" placeholder="주소 입력"></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><input type="text" id="detail-address" placeholder="나머지 주소 입력"></td>
+                        </tr>  
+                    </table>
+                </form> 
+
+                
+        </section>
+
+        <diV id="join-btn-box">
+        <div>
+            <button>취소</button>
+        </diV>
+
+        <diV>
+            <button>다음으로</button>
+        </diV>
+        </diV>
+
+
+    </main>
+    <footer id="footer-container"></footer>
+</body>
+
+<script src="/js/join.js" defer></script>
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/join2.css" />
+    <title>회원 가입</title>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+    <main>   
+        <section id="contant1"> 
+            <div id="jointitle">
+                <h2>회원가입</h2>
+            </div>
+
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+        
+                        <span class="middle"></span> </br>
+                        <span class="content"></span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container-fluid mt-5" style="text-align: center;">
+                <h1 style="font-size : 2em; margin-top: 0; font-weight: bold;"><span style="color: #FF5222; font-weight: 900;">CAP AI지문솔루션</span> 회원가입</h1>
+                <div class="container">
+                    <div class="row">
+                        <span class="capteaching"></span>　<span class="intro"></span></br>
+        
+                        <span class="content"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+        
+                <div class="container" style="margin-top: 0em; margin-bottom: 2em">
+                    <form name="join" action="BNS_registerDB.php" method="post">
+                        <table class="table table-bordered" style="margin-bottom:0; border-top: solid red;">
+                            <tr style="display: table-row">
+                                <th><span style="color:red">*</span>회원구분 : </th>
+                                <td>
+                                    <div>
+                                        <label class="radio-inline" style="margin:0; padding:0; margin-right:18px; margin-bottom:10px;">
+                                            <INPUT type="radio" class="rd-q0" value="5" name="position">
+                                            컨설턴트
+                                        </label>
+                                        <label class="radio-inline" style="margin:0; padding:0; margin-right:18px; margin-bottom:10px;">
+                                            <INPUT type="radio" class="rd-q0" value="4" name="position">
+                                            지문분석전문가
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="width:20%;">
+                                    <span>*</span>
+                                    아이디:
+                                </th>
+                                <td colspan=3>
+                                    <input style="width:70%; float: none; margin: 0 auto;" type="text" name="id" class="memberId form-control" placeholder="아이디는 4~12자의 영문 대소문자와 숫자로만 입력" onkeyup='fn_press_han(this);' maxlength="12" required />
+                                    <input style="width:20%; float: right; margin: 0 auto; display:inline;border-radius: 15px;" type="button" value="중복확인" class="memberIdCheck btn btn-outline-info" disabled />
+                                </td>
+                        </table>
+                        <table class="table table-bordered" style="margin-top:0; margin-bottom:0;">
+                            <tr class="checkAlertId"></tr>
+                        </table>
+                        <table class="table table-bordered" style="margin-bottom:0;">
+                            <tr>
+                                <th style="width:20%;">
+                                    <span>*</span>
+                                    비밀번호:
+                                </th>
+                                <td colspan=3>
+                                    <input style="width:80%;" type="password" name="pw" class="pw form-control" placeholder="비밀번호는 8~12자의 영문 대소문자와 숫자로만 입력" maxlength="12" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>*</span>
+                                    비밀번호 확인:
+                                </th>
+                                <td colspan=3>
+                                    <input style="width:80%;" type="password" name="pwCheck" class="pwCheck form-control" maxlength="12" required />
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered" style="margin-top:0; margin-bottom:0;">
+                            <tr class="checkAlertPw"></tr>
+                        </table>
+                        <table class="table table-bordered" style="margin-top:0; border-bottom: solid red;">
+                            <tr>
+                                <th style="width:20%;">
+                                    <span>*</span>
+                                    이름:
+                                </th>
+                                <td colspan=3>
+                                    <input style="width:80%;" type="text" name="name" class="name form-control" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="width:20%;">
+                                    <span>*</span>
+                                    주소:
+                                </th>
+                                <td colspan=3>
+                                    <input style="width:80%;" type="text" name="address" class="name form-control" required />
+                                </td>
+                            </tr>
+                            <tr style="display: none;">
+                                <th style="width:20%;">
+                                    <span>*</span>
+                                    직책:
+                                </th>
+                                <td colspan=3>
+                                    <input type="text" id="job" name="job" class="form-control" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="width:20%;">
+                                    <span>*</span>
+                                    연락처 :
+                                </th>
+                                <td colspan=3>
+                                    <input type="text" placeholder="-제외 (숫자만)" onkeyup='removeChar(event)' style='ime-mode:disabled;' name="ph" class="ph form-control check-need" maxlength="11" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>*</span>
+                                    e-mail:
+                                </th>
+                                <td colspan=3>
+                                    <div class="row">
+                                        <input type="text" placeholder="" name="email" id="email" style="width: 30%; float: none; margin: 0 auto;" class="form-control check-need"> @
+                                        <input type="text" name="str_email02" id="str_email02" style="width: 30%; float: none; margin: 0 auto;" class="form-control check-need" disabled="" value="naver.com">
+                                        <select style="width: 30%; float: none; margin: 0 auto;" class="form-control check-need" name="selectEmail" id="selectEmail">
+                                            <option value="1">직접입력</option>
+                                            <option value="naver.com" selected="">naver.com</option>
+
+                                            <option value="gmail.com">gmail.com</option>
+
+                                        </select>
+                                    </div>
+                                    <span class="my-3 text-muted" style="margin-top: 50px;">e-mail은 아이디와 비밀번호 찾기에 사용됩니다. 정확하게 입력해 주세요.</span>
+                                </td>
+                            </tr>
+        
+                        </table>
+        
+                        <div class="text-center mt-3 mb-5">
+                            <input class="register btn btn-outline-info" type="submit" value="회원가입" disabled />
+                        </div>
+                        <div class="formCheck">
+                            <input type="hidden" name="idChecked" class="idChecked" />
+                            <input type="hidden" name="pwChecked" class="pwChecked" />
+                            <input type="hidden" name="nameChecked" class="nameChecked" />
+                            <input type="hidden" name="phChecked" class="phChecked" />
+                            <input type="hidden" name="adrChecked" class="adrChecked" />
+                            <input type="hidden" name="emailChecked" class="emailChecked" />
+                    
+                        </div>
+                </div>
+        
+                </form>
+            </section> 
+
+    <footer id="footer-container"></footer>
+</body>
+
+<script src="/js/join2.js" defer></script>
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+
+</html>

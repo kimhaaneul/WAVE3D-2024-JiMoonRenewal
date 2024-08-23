@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/cap_ci.css" />
+    <title>CI 소개</title>
+</head>
+
+
+<body>
+<main>
+<div id="menu-container"></div>
+
+<section id="content1">
+    <div id="cap-textbox">
+        <h2>CI 소개</h2>
+    </div>
+
+    <div id="cap-textbox2">
+        <h2 id="text-bold">Corporate Identity</h2>
+    </div>
+
+    <div id="cap-textbox3">
+        <p id="text-bold">캡티칭 로고는 '생각을 더하다'를 상징하면서, '상상력·창의력·기술력을 더하다'의 의미를 전달합니다.</p>
+        <p>캡티칭 심볼마크와 로고 디자인은 게임 조종기에서 영감을 받아 제작하게 되었으며,</p>
+        <p>학생들이 코딩이라는 개념을 어렵지 않고 재미있게 배울 수 있다는 인상을</p>
+        <p>줄 수 있도록 표현하였습니다.</p>
+    </div>
+
+    <hr class="ci-line" />
+</section>
+
+<section id="content2">
+    <div id="cap-textbox2">
+        <h2 id="text-bold">심볼 마크</h2>
+    </div>
+
+    <div id="ci-img-box">
+        <img src="/img/ci1.png" />
+    </div>
+    <hr class="ci-line" />
+    <div id="cap-textbox2">
+        <h2 id="text-bold">시그니처</h2>
+    </div>
+
+    <div id="ci-img-box">
+        <img src="/img/ci2.png" />
+    </div>
+    <hr class="ci-line" />
+    <div id="cap-textbox2">
+        <h2 id="text-bold">슬로건</h2>
+    </div>
+
+    <div id="ci-img-box">
+        <img src="/img/ci3.png" />
+    </div>
+    <div id="box1"></div>
+       
+</section>
+
+    <footer id="footer-container"></footer>  
+</main>
+    
+</body>
+
+
+<script src="/js/index.js"></script>
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+</html>

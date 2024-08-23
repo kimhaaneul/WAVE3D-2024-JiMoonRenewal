@@ -1,0 +1,155 @@
+* {
+    margin :0;
+    font-family: "Pretendard Light","Pretendard Medium","Pretendard Regular",
+    "Pretendard SemiBold","Pretendard Regular","Pretendard Bold","Pretendard ExtraBold";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+li {
+    list-style: none;
+  list-style: none;
+}
+
+#contant1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+}
+
+
+/* ============= 기본설정 끝=============== */
+#cp-textbox{
+    font-size: 25pt;
+    padding: 20px;
+    color: #09003a;
+    text-align: center;
+}
+
+    
+#cp-textbox h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-family: "Pretendard Bold";
+}
+
+/* ============= 기본설정 끝=============== */
+    
+#timeline {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12pt;
+}
+    
+
+#vertical-line {
+    width: 2px;
+    background-color: #c5c5c5;
+    height: 160%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    
+/* ============= 타임라인 시작=============== */
+
+.timelinelist {
+    list-style: none;
+    position: relative;
+    display: contents;
+    justify-content: center;
+        
+}
+    
+#contant1 .timelinelist li {
+    display: flex;
+    margin: 20px 0;
+
+}
+    
+ .timeline-year-left {
+    width: 0%;
+    text-align: right;
+    left:-56%;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #adadad;
+    
+}
+
+.timeline-year-right {
+    width: 0%;
+    text-align: right;
+    left:-48%;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #adadad;
+    margin-top: 15px;
+}
+    
+    
+.timeline-event {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+    
+.timeline-dot-left {
+    width: 10px;
+    height: 10px;
+    background-color: #09003a;
+    border-radius: 50%;
+    position: absolute;
+    left: 49.8%;
+    margin-top: 5px;
+    }
+
+.timeline-dot-right {
+    width: 10px;
+    height: 10px;
+    background-color: #09003a;
+    border-radius: 50%;
+    position: absolute;
+    left: 49.8%;
+    margin-top: 25px;    
+}
+
+
+.event-details-right {
+    width: 100%;
+    border-radius: 4px;
+    margin-left: 50%;
+    text-align: left;
+    padding-left: 20px;
+    padding: 0px 20px;
+
+}
+
+
+.event-details-left {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 4px;
+    margin-right: 50%;
+    text-align: right;
+    padding:20px;
+}
+    
+.event-details-left,
+.event-details-right p {
+    line-height:1.6;
+    font-size: 16px;
+    color: #333;
+}
+  
+.timeline-year-right,.timeline-year-left, .timeline-event {
+        position: relative;
+    }
+    
+ 

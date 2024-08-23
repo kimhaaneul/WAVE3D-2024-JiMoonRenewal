@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/inquiry.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <title>가맹문의</title>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+    <main>
+    <section id="content1">
+        <div id="inpuiry-box1">
+            <img src="/img/가맹문의.png" />
+        </div>
+
+    </section>
+    </main>
+    <footer id="footer-container"></footer>
+
+</body>
+
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+</html>

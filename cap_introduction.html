@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/cap_introduction.css" />
+    <title>회사소개</title>
+</head>
+
+
+<body>
+<main>
+<div id="menu-container"></div>
+
+<section id="content1">
+    <div id="cap-textbox">
+        <h2>회사 소개</h2>
+    </div>
+    
+  
+
+    <div id="cap-textbox2">
+        <div id="cap-textbox3">
+        <h2 id="text-bold">부모 개발자가 직접 자녀교육을 위해 기획하고 만들어낸</h2>
+        <h2 id="text-bold">언택트·AI·창의 융합 코딩교육!</h2>
+        </div>
+        <div id="cap-img-box2">
+            <img src="/img/cap소개2.png">
+        </div>
+        <p id="text-bold">캡티칭(Cap Teaching)은 CACA 코딩개념(개념화, 알고리즘화, 코딩, 응용)교육과 자체 개발한 교구를 기반으로 합니다.</p>
+        <p>30개 분야 500가지 이상의 드론 & 로봇 & IOT & AI 교육 콘텐츠를 통해</p>
+        <p>최적화된 교육 및 체험을 제공하여 비대면, 인공지능, STEAM및</p>
+        <p>PBL 교육이 가능한 창의 교육 플랫폼 기업입니다.</p>
+    </div>
+    </section>
+    
+    <div id="box1"></div>
+    <section id="content2">
+    <ul class="cap-list">
+        <li>
+            <div id="cap-circle" style="background-color: #ffeae4;">
+            <span class="cap-circle-text">원리를 알아가는 놀이형 교육</span>
+            <div id="cap-circle2" style="background-color: #ee5d35;"> 
+            </div>
+            <div class="cap-num">01</div> 
+            <span class="cap-circle-text2">쉽고 재미있게</span>
+            </div>
+            </div>
+        </li>
+
+        <li>
+            <div id="cap-circle" style="background-color: #e6e6e6;">
+            <span class="cap-circle-text">
+                주입식 공부가 아닌 코딩을 활용하여 로봇과 드론을 움직이는 목적형 창의 교육</span>
+            <div id="cap-circle2" style="background-color: #949494;"> 
+            </div>
+            <div class="cap-num">02</div> 
+            <span class="cap-circle-text2">목적형 창의 교육</span>
+            </div>
+            </div>
+        </li>
+
+        <li>
+            <div id="cap-circle" style="background-color: #feffcc;">
+            <span class="cap-circle-text">나만의 생각으로 원하는 움직임을 만드는 창작 과정</span>
+            <div id="cap-circle2" style="background-color: #ffe600;"> 
+            </div>
+            <div class="cap-num">03</div> 
+            <span class="cap-circle-text2" style="color: black;">생각하며 만드는</span>
+            </div>
+            </div>
+        </li>
+
+        <li>
+            <div id="cap-circle" style="background-color: #b1e6ff;">
+            <span class="cap-circle-text">초등 1~6학년 중학교 및 고등학교 이상 과정까지 학기 별, 수준별로 맞추어진 체계적인 교육과정</span>
+            <div id="cap-circle2" style="background-color: #00aeff;"> 
+            </div>
+            <div class="cap-num">04</div> 
+            <span class="cap-circle-text2">수준별 맞춤 교육</span>
+            </div>
+            </div>
+        </li>
+    </ul>
+    <div id="box1"></div>
+</section>
+
+
+    <footer id="footer-container"></footer>  
+</main>
+    
+</body>
+
+
+<script src="/js/index.js"></script>
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+</html>

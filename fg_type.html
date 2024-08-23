@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/fg_type.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <title>AI지문유형 타입</title>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+    <main>
+        <section id="contant1">
+            <div id="jm-contant-box1">
+                <div>
+                    <img src="/img/지문소개1.png">
+                </div>
+                <h2>AI지문 유형</h2>
+            </div>
+
+            <div class="image-grid">
+                <img src="/img/창도형.png">
+                <img src="/img/사추형.png">
+                <img src="/img/열리형.png">
+                <img src="/img/완추형.png">
+                <img src="/img/중추형.png">
+                <img src="/img/규성형.png">
+                <img src="/img/감추형.png">
+                <img src="/img/대활형.png">
+                <img src="/img/박헌형.png">
+                <img src="/img/자예형.png">
+                <img src="/img/독연형.png">      
+            </div>
+
+
+
+        </section>
+
+
+    <footer id="footer-container"></footer>
+    </main>
+    
+</body>
+
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+</html>

@@ -1,0 +1,174 @@
+* {
+    margin :0;
+    font-family: "Pretendard Light","Pretendard Medium","Pretendard Regular",
+    "Pretendard SemiBold","Pretendard Regular","Pretendard Bold","Pretendard ExtraBold";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+li {
+    list-style: none;
+  list-style: none;
+}
+
+#contant1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+}
+
+#join-line{
+    width: 33%;
+    background-color : #E95305;
+    height: 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+/* ------- 회원가입 정보 ----------*/
+
+#jointitle{
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 3%;
+    color : #ff7200;
+    font-size: 25pt;
+}
+
+.joinform-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    align-items: center;
+}
+
+.joinform-container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color:  #ff7200;
+    font-family: "Pretendard Light";    
+}
+
+
+.join-table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.join-table th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    font-family: "Pretendard Light";    
+}
+
+.join-table th {
+    width: 150px;
+    color:  #ff7200;
+    text-align: right; /* 글씨를 오른쪽으로 정렬 */
+    padding-right: 10px; /* 오른쪽 여백 추가 */
+    vertical-align: middle; /* 수직 정렬 */
+    display: flex; /* 플렉스박스 사용 */
+    justify-content: flex-end; /* 수평적으로 오른쪽 정렬 */
+    align-items: center;
+}
+
+.join-table label{
+    color:  #ff7200;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[id="verify-code"]{
+    margin: 0 10px;
+    width: 30%;
+}
+
+.email td {
+    display: flex;
+    align-items: center;
+    
+}
+
+input[type="email"], input[id="email-domain"] {
+    width: 55%; 
+    flex: 1; 
+}
+
+.email span {
+    margin: 0 5px;
+}
+
+#email-domain-input {
+    width: 150px;  /* 크기 고정 */
+    visibility: hidden;  /* 처음에는 숨겨짐, 크기는 유지됨 */
+}
+
+.memberIdCheck {
+    background-color: #ffffff;
+    color: #ff7200;
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Pretendard Light";
+}
+
+.memberIdCheck:hover {
+    background-color: #ff7200;
+    color: white;
+}
+
+input + #join-btn, 
+input[type="text"] + span {
+    margin-left: 10px;
+}
+
+select {
+    margin-right: 10px;
+    width: 48%;
+}
+
+
+
+
+/* ========== 취소, 다음으로 ============*/
+#join-btn-box{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+#join-btn-box button {
+    background-color: #ffffff;
+    width: 200px;
+    height: 50px;
+    font-size: 18pt;
+    color: #ff7200;
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Pretendard Light";
+    margin-left: 20px;
+}
+
+#join-btn-box button:hover {
+    background-color: #ff7200;
+    color: white;
+}

@@ -1,0 +1,87 @@
+* {
+    margin :0;
+    font-family: "Pretendard Light","Pretendard Medium","Pretendard Regular",
+    "Pretendard SemiBold","Pretendard Regular","Pretendard Bold","Pretendard ExtraBold";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+li {
+    list-style: none;
+  list-style: none;
+}
+
+#contant1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+}
+
+/* ===============테이블 시작============= */
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.middle {
+    font-size: 1.5em;
+}
+
+.content {
+    font-size: 1.2em;
+}
+
+table.table-bordered {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.radio-inline input {
+    margin-right: 10px;
+}
+
+.highlight {
+    color: #FF5222;
+    font-weight: 900;
+}
+
+.alert-danger {
+    color: red;
+}
+
+.alert-success {
+    color: green;
+}
+
+.form-control {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]:disabled {
+    background-color: grey;
+}
