@@ -93,7 +93,7 @@ a {
 
 /* 네 번째 submenu */
 #menu > li:nth-child(4) .submenu {
-    left: -1%;
+    left: 3%;
 }
 
 /* 다섯 번째 submenu */

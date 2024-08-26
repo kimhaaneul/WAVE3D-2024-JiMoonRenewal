@@ -53,8 +53,7 @@ export function loadMenu() {
                     로그인               
                 </button>
                 <button id="join-go">
-                    회원가입
-                    <a href="#"></a>
+                    회원가입                    
                 </button>
         </div>
     </div>
@@ -67,6 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.getElementById("join-go").addEventListener("click", function() {
-        window.location.href = "join.html"; // 회원가입 페이지 URL로 변경하세요
+        window.location.href = "http://aitms.co.kr/capfingers/CMS_register_1.php";
     });
 });

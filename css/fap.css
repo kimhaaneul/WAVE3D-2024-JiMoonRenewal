@@ -1,7 +1,7 @@
 * {
     margin :0;
     font-family: "Pretendard Thin","Pretendard Light","Pretendard Medium","Pretendard Regular",
-    "Pretendard SemiBold","Pretendard Regular";
+    "Pretendard SemiBold","Pretendard Bold","Pretendard Regular";
 }
 
 a {
@@ -79,8 +79,7 @@ a {
 }
 
 .faq-list-li:hover {
-    background-color: #E95305;
-    color: #ffffff;
+    color: #E95305;
     cursor: pointer;
 }
 
