@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/center.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <title>센터계약</title>
+</head>
+<body>
+    <main>
+    <div id="menu-container"></div>
+
+    <section id="content1">
+        <div id="center-textbox">
+            <h2>센터 계약</h2>
+        </div>
+
+        <div id="center-textbox2">
+            <h2 id="text-bold">계약은 어떻게 진행되나요?</h2>
+        </div>
+
+        <div id="center-textbox3">
+            <h2 style="color:#E95305;">센터/지사 프로세스</h2>
+        </div>
+
+        <div id="center-textbox4"></div>
+
+        <div id="centerimg-box">
+            <img src="/img/지사프로세스.png" />
+        </div>
+    </section>
+    <div class="box1"></div>
+    <section id="content2">
+
+        <div id="center-textbox3">
+            <h2 style="color:#27C2FF;">컨설턴트 프로세스</h2>
+        </div>
+
+        <div id="center-textbox4"></div>
+
+        <div id="centerimg-box">
+            <img src="/img/컨설턴트프로세스.png" />
+        </div>
+    </section>
+
+    
+    </main>
+    <footer id="footer-container"></footer>
+</body>
+
+<script type="module">
+    import { loadMenu } from './menu.js';
+    document.getElementById('menu-container').innerHTML = loadMenu();
+</script>
+<script type="module">
+    import { loadFooter } from './footer.js';
+    document.getElementById('footer-container').innerHTML = loadFooter();
+</script>
+
+</html>

@@ -110,13 +110,13 @@ a {
 
  #fg_pg_table2 th:first-child, 
  #fg_pg_table2 td:first-child {
-     width: 130px;
+     width: 160px;
  }
 
 
 #fg_pg_table2 th:last-child, 
 #fg_pg_table2 td:last-child {
-    width: 90px; 
+    width: 120px; 
 }
 
 
@@ -294,7 +294,7 @@ a {
 
  #fg_pg_table3 th:first-child, 
  #fg_pg_table4 td:first-child {
-     width: 150px;
+     width: 160px;
  }
 
 

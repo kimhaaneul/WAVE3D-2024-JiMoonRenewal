@@ -1,0 +1,93 @@
+* {
+    margin :0;
+    font-family: "Pretendard Thin","Pretendard Light","Pretendard Medium","Pretendard Regular",
+    "Pretendard SemiBold","Pretendard Regular";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* ========= 기본설정 끝 ==========*/
+  #content1, #content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+  }
+
+  #center-textbox{
+    font-size: 25pt;
+    padding: 20px;
+    color: #3d3d3d;
+    margin-bottom: 20px;
+  }
+
+  #center-textbox h2{
+    font-family: "Pretendard Medium";
+  }
+
+  #center-textbox2 h2{
+    font-size: 20pt;
+    margin-bottom: 40px;
+    font-family: "Pretendard Light";
+  }
+  
+  #text-bold{
+    font-weight: bold;
+  }
+
+#center-textbox3{
+    font-size: 16pt;
+    margin-bottom: 10px;
+    margin-right: 52%;
+}
+
+#center-textbox3 h2{
+    font-family: "Pretendard Light";
+}
+
+
+#center-textbox4{
+    width: 240px;
+    background-color : #E95305;
+    height: 2px;
+    margin-right: 52%;
+}
+
+  #centerimg-box img{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 65%;
+  }
+
+.centerimg-box-text1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    text-align: center;
+    font-family: "Pretendard Light";
+    font-size: 14pt;
+    text-align: center; 
+    vertical-align: middle;
+    margin: 5px;
+}
+
+
+#content2 #center-textbox4{
+    width: 240px;
+    background-color : #27C2FF;
+    height: 2px;
+    margin-right: 52%;
+}
+
+.box1{
+    margin: 50px;
+}

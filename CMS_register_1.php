@@ -288,7 +288,7 @@ span {
                                 checkAlertId.empty();
                                 checkAlertId.append(
                                     '<td class="alert alert-success" id="alert-success" colspan=3 ">사용가능한 아이디입니다.</td>'
-                                    );
+                                );
                                 memberIdCheck.attr("disabled", true);
                                 idChecked.val('1');
                                 if (idChecked.val() == '1' && pwChecked.val() ==
@@ -305,7 +305,7 @@ span {
                                 checkAlertId.empty();
                                 checkAlertId.append(
                                     '<td class="alert alert-danger" id="alert-danger" colspan=3 ">다른 아이디를 입력해 주세요.</td>'
-                                    );
+                                );
                                 memberId.val("");
                                 memberId.focus();
                             }
@@ -319,7 +319,7 @@ span {
             } else {
                 checkAlertId.append(
                     '<td class="alert alert-danger" id="alert-danger" colspan=3 ">아이디는 4~12자의 영문 대소문자와 숫자로만 입력</td>'
-                    );
+                );
                 memberId.focus();
             }
 
@@ -335,7 +335,7 @@ span {
                     checkAlertPw.empty();
                     checkAlertPw.append(
                         '<td class="alert alert-success" id="alert-success" colspan=3 ">비밀번호가 일치합니다.</td>'
-                        );
+                    );
                     pwChecked.val('1');
                     if (idChecked.val() == '1' && pwChecked.val() == '1' && nameChecked.val() == '1' &&
                         phChecked.val() == '1' && emailChecked.val() == '1') {
@@ -346,7 +346,7 @@ span {
                     pwChecked.val("");
                     checkAlertPw.append(
                         '<td class="alert alert-danger" id="alert-danger" colspan=3 ">비밀번호를 확인해주세요.</td>'
-                        );
+                    );
                     memberPw2.on("propertychange change keyup paste input", function() {
                         register.attr("disabled", true);
                         checkAlertPw.empty();
@@ -355,7 +355,7 @@ span {
                             checkAlertPw.empty();
                             checkAlertPw.append(
                                 '<td class="alert alert-success" id="alert-success" colspan=3 ">비밀번호가 일치합니다.</td>'
-                                );
+                            );
                             pwChecked.val('1');
                             if (idChecked.val() == '1' && pwChecked.val() == '1' && nameChecked
                                 .val() == '1' && phChecked.val() == '1' && emailChecked.val() ==
@@ -365,7 +365,7 @@ span {
                         } else {
                             checkAlertPw.append(
                                 '<td class="alert alert-danger" id="alert-danger" colspan=3 ">비밀번호가 일치하지 않습니다.</td>'
-                                );
+                            );
                             memberPw2.focus();
                             pwChecked.val("");
                         }
@@ -374,7 +374,7 @@ span {
             } else {
                 checkAlertPw.append(
                     '<td class="alert alert-danger" id="alert-danger" colspan=3 ">비밀번호는 8~12자의 영문 대소문자와 숫자로만 입력</td>'
-                    );
+                );
                 memberPw.focus();
             }
         });
@@ -584,7 +584,6 @@ span {
                                     <option value="gmail.com">gmail.com</option>
                                     <option value="korea.com">korea.com</option>
                                     <option value="hanmail.net">hanmail.net</option>
-                                    <option value="hotmail.com">hotmail.com</option>
                                     <option value="nate.com">nate.com</option>
                                     <option value="yahoo.co.kr">yahoo.co.kr</option>
                                 </select>
@@ -594,7 +593,7 @@ span {
                         </td>
                     </tr>
                     <!-- 소속 삭제
-					 <tr>
+                <tr>
                         <th><span style="color:red">&nbsp;</span>소속:</th>
                         <td><div class = "row">
                                 <input type="text" placeholder="" name="location" id = 'location' style = "width: 74%; float: none; margin: 0 auto;" class="form-control check-need"  readonly/>
@@ -607,6 +606,8 @@ span {
 
                 <div class="text-center mt-3 mb-5">
                     <input class="register btn btn-outline-info" type="submit" value="회원가입" disabled />
+                    <!-- 취소하기 버튼 추가 -->
+                    <a href="adminLogin.php" class="btn btn-outline-danger ml-2">취소하기</a>
                 </div>
                 <div class="formCheck">
                     <input type="hidden" name="idChecked" class="idChecked" />

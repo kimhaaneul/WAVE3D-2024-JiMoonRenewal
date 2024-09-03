@@ -15,7 +15,6 @@ export function loadMenu() {
                         
                         <li><a href="cap_introduction.html">회사소개</a></li>
                         <li><a href="cap_ci.html">CI</a></li>
-                        <li><a href="directions.html">오시는길</a></li>
                     </ul>
                 </li>
                 <li>지문소개
@@ -35,7 +34,7 @@ export function loadMenu() {
                 <li>가맹계약
                     <ul class="submenu">
                     <div id="menu-colorbox"></div>
-                        <li><a href="inquiry.html">계약문의</a></li>
+                        <li><a href="center.html">센터계약</a></li>
 
                     </ul>
                 </li>

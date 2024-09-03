@@ -1,0 +1,130 @@
+ body {
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    padding: 20px;
+    }
+
+li {
+    list-style: none;
+}
+
+/*================ 기본설정 끝 ===========*/
+.report-container {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+.report-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.report-header span{
+    font-size: 24pt;
+}
+
+.footer {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+ 
+
+
+/* ========== 선만들기 ============*/
+
+.container1 { 
+    position: relative;
+    width: 600px; 
+    height: 300px; 
+}
+
+.circle{ /* 원 */
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%; 
+    background-color: #FF6700;
+    top: 50%; 
+    left: 0; 
+    transform: translate(-50%, -50%); 
+  }
+
+.line1 {/* 첫번째 직선 */
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #FF6700;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.line1 h3{
+    margin-left: 35px;
+    margin-top: -25%;
+    color: #FF6700;
+    position: absolute;
+}
+
+.diagonal1 { /* 사선 */
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background-color: #FF6700;
+    top: calc(50% - 62px);
+    left: 150px;
+    transform: rotate(40deg);
+    transform-origin: top left; /* 회전 기준점 설정 */
+}
+
+.line2 {/* 두번째 직선(긴 거) */
+    position: absolute;
+    width: 250px;
+    height: 2px;
+    background-color: #FF6700;
+    top: calc(50% + -62px); 
+    left: 150px;
+}
+
+/* ======== 아래선 ========== */
+
+.line-bottom1 { /* 첫번째 아래직선 */
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #FF6700;
+    top: 53%;
+    left: 20px;
+}
+
+.diagonal-bottom1 { /* 아래사선 */
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background-color: #FF6700;
+    top: calc(70% + 0px); 
+    left: 79px; 
+    transform: rotate(-28deg);
+    transform-origin: top left; 
+}
+
+.line-bottom2 { /* 두번째 아래 직선(긴 거) */
+    position: absolute;
+    width: 410px;
+    height: 2px;
+    background-color: #FF6700;
+    top: calc(70% + 104px); /* line-bottom2의 위치 조정 */
+    left: 135px; /* diagonal-bottom1의 끝에 맞추기 */
+}
+
+.report-content {
+    position: absolute;
+    margin-top: 100px; /* 컨텐츠 박스 위치 조정 */
+    margin-left: 20%;
+}
