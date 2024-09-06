@@ -41,12 +41,12 @@ $board4 = $stmt->fetch();
     <title>CAP AI JIMOON CONSULTANT</title>
 
     <script type="text/javascript">
-        var UserAgent = navigator.userAgent;
-        if (UserAgent.match(
-                /iPhone|ipad|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i
-            ) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
-            location.href = "http://aitms.co.kr/capfingers/consultant.php"; /* 모바일 홈페이지 경로 */
-        }
+    var UserAgent = navigator.userAgent;
+    if (UserAgent.match(
+            /iPhone|ipad|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i
+        ) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+        location.href = "http://aitms.co.kr/capfingers/consultant.php"; /* 모바일 홈페이지 경로 */
+    }
     </script>
 
 </head>
@@ -58,17 +58,14 @@ $board4 = $stmt->fetch();
                 <img src="/img/cap-jm.png"></a>
         </div>
 
-        <div class="consultant-img">
-            <img src="/img/컨설턴트메인.png">
-        </div>
 
         <?php if (!isset($_SESSION['id'])) { ?>
-            <form action="login-checkBMS.php" method="post" encType="multiplart/form-data">
-            </form>
+        <form action="login-checkBMS.php" method="post" encType="multiplart/form-data">
+        </form>
         <?php } else { ?>
 
-            <div class="consultant-container">
-                <?php
+        <div class="consultant-container">
+            <?php
                 $name = $_SESSION['name'];
                 echo "<div class='text-center'>";
                 echo "<span>$name 님 환영합니다. </span>";
@@ -76,33 +73,33 @@ $board4 = $stmt->fetch();
                 echo "</div>";
                 ?>
 
-                <div class="consultant-btnbox">
-                    <?php if ($_SESSION['id'] == $board['id']) { ?>
-                        <button class="btn btn-lg btn-primary btn-block" type="button"
-                            onclick="location.href='BNS_contract.php'"
-                            style="background-color: #FC4F52;border: 1px solid #FC4F52;">비밀유지계약서 (완료)</button>
-                    <?php } else { ?>
-                        <?php if ($board4['NDA'] != "") { ?>
-                            <button class="btn btn-lg btn-primary btn-block" type="button"
-                                onclick="location.href='BNS_contract.php'"
-                                style="background-color: #FC4F52;border: 1px solid #FC4F52;">비밀유지계약서 (완료)</button>
-                        <?php } else { ?>
-                            <button class="btn btn-lg btn-primary btn-block" type="button"
-                                onclick="location.href='BNS_contract.php'">비밀유지계약서 (동의 필수)</button>
-                        <?php } ?>
-                    <?php } ?>
-                    <button id="reservation_list" class="btn btn-lg btn-primary btn-block" type="button"
-                        onclick="location.href='reservation/reservation_form.php'">예약 관리</button>
-                </div>
-                <div
-                    style="<?php if (!isset($_SESSION['id'])) { ?>margin-left: 525px; position: absolute;margin-top: -334px;<?php } else { ?>  margin-left: -600px; position: absolute;margin-top: 150px;z-index:999;<?php } ?>">
-
-                </div>
+            <div class="consultant-btnbox">
+                <?php if ($_SESSION['id'] == $board['id']) { ?>
+                <button class="btn btn-lg btn-primary btn-block" type="button"
+                    onclick="location.href='BNS_contract.php'"
+                    style="background-color: #FC4F52;border: 1px solid #FC4F52;">비밀유지계약서 (완료)</button>
+                <?php } else { ?>
+                <?php if ($board4['NDA'] != "") { ?>
+                <button class="btn btn-lg btn-primary btn-block" type="button"
+                    onclick="location.href='BNS_contract.php'"
+                    style="background-color: #FC4F52;border: 1px solid #FC4F52;">비밀유지계약서 (완료)</button>
+                <?php } else { ?>
+                <button class="btn btn-lg btn-primary btn-block" type="button"
+                    onclick="location.href='BNS_contract.php'">비밀유지계약서 (동의 필수)</button>
+                <?php } ?>
+                <?php } ?>
+                <button id="reservation_list" class="btn btn-lg btn-primary btn-block" type="button"
+                    onclick="location.href='reservation/reservation_form.php'">예약 관리</button>
             </div>
+            <div
+                style="<?php if (!isset($_SESSION['id'])) { ?>margin-left: 525px; position: absolute;margin-top: -334px;<?php } else { ?>  margin-left: -600px; position: absolute;margin-top: 150px;z-index:999;<?php } ?>">
+
+            </div>
+        </div>
 
     </div>
-<?php } ?>
-</div>
+    <?php } ?>
+    </div>
 
 </body>
 

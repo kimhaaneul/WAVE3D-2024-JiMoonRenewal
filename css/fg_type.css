@@ -61,3 +61,175 @@ li {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+
+/* ================== 1025~1500px 해상도 ========================*/
+@media screen and (min-width : 1025px) and (max-width:1500px){
+
+  #contant1, #contant2{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#jm-contant-box1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 14%;
+    align-items: center;
+    margin-bottom: 2%;
+    position: relative;
+
+  }
+
+  #jm-contant-box1 img{
+    width: 70%;
+    position: relative;
+  }
+
+  #jm-contant-box1 h2{
+    color : #E95305;
+    font-family: "Pretendard SemiBold";
+    text-align: center;
+    align-items: center;
+    margin-left: 6pt;
+    font-size: 28pt;
+    position: relative;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    max-width: 1030px;
+    margin: 0 auto;
+}
+
+.image-grid img {
+  align-items: center;
+  justify-content: center;
+    margin-bottom: 20px;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+}
+
+
+/* =================== 800~1024px까지 해상도 =======================*/
+@media screen and (min-width : 800px) and (max-width:1024px){
+  #contant1, #contant2{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#jm-contant-box1{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 9%;
+    align-items: center;
+    margin-bottom: 2%;
+    position: relative;
+
+  }
+
+  #jm-contant-box1 img{
+    width: 65%;
+    position: relative;
+  }
+
+  #jm-contant-box1 h2{
+    color : #E95305;
+    font-family: "Pretendard SemiBold";
+    text-align: center;
+    align-items: center;
+    margin-left: 2pt;
+    font-size: 22pt;
+    position: relative;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 10px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.image-grid img {
+  align-items: center;
+  justify-content: center;
+    margin-bottom: 20px;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+}
+
+
+/* =================== ~799까지 해상도 =======================*/
+@media screen and (min-width:350px) and (max-width:799px){
+  #contant1, #contant2{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#jm-contant-box1{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 15%;
+    align-items: center;
+    margin-bottom: 2%;
+    position: relative;
+
+  }
+
+  #jm-contant-box1 img{
+    width: 55%;
+    position: relative;
+  }
+
+  #jm-contant-box1 h2{
+    color : #E95305;
+    font-family: "Pretendard SemiBold";
+    text-align: center;
+    align-items: center;
+    margin-left: -14pt;
+    font-size: 16pt;
+    position: relative;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 10px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-left : 4%;
+}
+
+.image-grid img {
+  align-items: center;
+  justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+}
+

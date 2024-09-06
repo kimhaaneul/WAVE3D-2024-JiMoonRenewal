@@ -79,7 +79,7 @@ include_once("db.php");
             <?php include_once('tos-box.php'); ?>
 
             <hr>
-            <form id="agreementForm" method="post" action="CMS_register_1.php" onsubmit="return handleFormSubmit();">
+            <form id="agreementForm" method="post" action="BNS_agreeDB.php" onsubmit="return handleFormSubmit();">
                 <input type="hidden" name="NDA" value="동의확인">
 
                 <!-- 동의 체크박스 -->

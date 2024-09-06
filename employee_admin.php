@@ -17,6 +17,7 @@ if (!isset($_SESSION['id'])) {
     </script>";
     exit;
 }
+
 // 사용자의 정보 가져오기
 $stmt = $con->prepare("SELECT * FROM consultant WHERE id = ?");
 $stmt->execute([$id]);
@@ -49,11 +50,14 @@ if ($result5) {
 }
 
 require 'db.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 require 'vendor/autoload.php';
 
-function sendEmail($to, $subject, $body) {
+function sendEmail($to, $subject, $body)
+{
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
@@ -79,7 +83,7 @@ function sendEmail($to, $subject, $body) {
 }
 
 // 페이지네이션을 위한 설정
-$items_per_page = 10;  
+$items_per_page = 10;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $items_per_page;
 
@@ -100,13 +104,15 @@ $total_stmt->execute();
 $total_consultants = $total_stmt->fetchColumn();
 $total_pages = ceil($total_consultants / $items_per_page);
 
-// 예약 승인 관리 데이터 가져오기
-$reservationQuery = "SELECT * FROM reservation_support ORDER BY idx ASC LIMIT :offset, :items_per_page";
+// 예약 승인 관리 데이터 가져오기 (날짜 내림차순)
+$reservationQuery = "SELECT * FROM reservation_support ORDER BY date DESC, idx ASC LIMIT :offset, :items_per_page";
 $reservationStmt = $con->prepare($reservationQuery);
 $reservationStmt->bindParam(':offset', $offset, PDO::PARAM_INT);
 $reservationStmt->bindParam(':items_per_page', $items_per_page, PDO::PARAM_INT);
 $reservationStmt->execute();
 $reservations = $reservationStmt->fetchAll();
+
+
 
 // 총 예약 승인 수 계산
 $total_reservation_query = "SELECT COUNT(*) FROM reservation_support";
@@ -194,7 +200,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -205,153 +210,75 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>관리자 예약 승인 폼</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/employee_admin.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <style>
-    .sidebar {
-        height: 100%;
-        width: 220px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #343a40;
-        padding-top: 20px;
-        font-family: 'Arial', sans-serif;
-    }
 
-    .sidebar a {
-        padding: 15px;
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-        display: block;
-        border-bottom: 1px solid #474f54;
-    }
-
-    .sidebar a:hover {
-        background-color: #495057;
-        color: white;
-    }
-
-    .content {
-        margin-left: 240px;
-        padding: 20px;
-        background-color: #f8f9fa;
-        min-height: 100vh;
-    }
-
-    .btn-approve {
-        background-color: #28a745;
-        color: white;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-    }
-
-    .btn-approve:hover {
-        background-color: #218838;
-    }
-
-    .btn-revoke {
-        background-color: #dc3545;
-        color: white;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-    }
-
-    .btn-revoke:hover {
-        background-color: #c82333;
-    }
-
-    table.table {
-        background-color: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    table.table th,
-    table.table td {
-        vertical-align: middle;
-        text-align: center;
-    }
-
-    h2 {
-        font-family: 'Arial', sans-serif;
-        color: #343a40;
-        border-bottom: 2px solid #343a40;
-        padding-bottom: 10px;
-    }
-
-    .section {
-        display: none;
-    }
-
-    .active {
-        display: block;
-    }
-    </style>
     <script>
-    function showSection(sectionId) {
-        document.getElementById('consultantSection').classList.remove('active');
-        document.getElementById('analystSection').classList.remove('active');
-        document.getElementById('reservationApprovalSection').classList.remove('active');
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
 
-        document.getElementById(sectionId).classList.add('active');
-    }
+        window.onload = function() {
+            showSection('reservationApprovalSection');
+        }
 
-    window.onload = function() {
-        showSection('reservationApprovalSection');
-    }
-
-    function toggleApproval(idx, action) {
-        $.ajax({
-            url: 'reservation/approve_reservation.php',
-            type: 'POST',
-            data: {
-                idx: idx,
-                pass: action
-            },
-            success: function(response) {
-                alert(response);
-                $('#reservationApprovalSection').load(window.location.href +
-                ' #reservationApprovalSection');
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error('Error during AJAX request:', textStatus, errorThrown);
-                alert('승인 처리 중 오류가 발생했습니다.');
-            }
-        });
-    }
+        function toggleApproval(idx, action) {
+            $.ajax({
+                url: 'reservation/approve_reservation.php',
+                type: 'POST',
+                data: {
+                    idx: idx,
+                    pass: action
+                },
+                success: function(response) {
+                    alert(response);
+                    $('#reservationApprovalSection').load(window.location.href +
+                        ' #reservationApprovalSection');
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('Error during AJAX request:', textStatus, errorThrown);
+                    alert('승인 처리 중 오류가 발생했습니다.');
+                }
+            });
+        }
     </script>
 </head>
 
 <body>
 
     <!-- sidebar.html -->
-    <div class="sidebar pe-4 pb-3 pl-2" style="border-radius: 0 0 25px 0; background-color: #EBEBEB; height: 658px;">
-        <nav class="navbar bg-light navbar-light" style="background-color: #EBEBEB !important;">
+    <div class="sidebar">
+        <div class="sidebar-jm-box">
+            <img src="/img/cap-jm.png">
+        </div>
+        <nav class="navbar">
             <div class="d-flex align-items-center ms-4 mb-4">
                 <div class="position-relative">
-                    <!-- <img class="rounded-circle" src="img/<?php echo $img ?>.png" alt="" style="width: 40px; height: 40px;"> -->
-                    <div class="">
-                    </div>
                 </div>
                 <div class="ms-3">
-                    <h6 class="mb-0"><?php echo $result5['name'] ?>&nbsp;<?php echo $job ?>님</h6>
+                    <h6 class="mb-0">
+                        <?php echo htmlspecialchars($result5['name']); ?>&nbsp;<?php echo htmlspecialchars($job); ?>님
+                    </h6>
                     <span>반갑습니다.</span>
                 </div>
+                <a href="../adminLogout.php" class="sidebar-logout">로그아웃</a>
             </div>
-            <div class="navbar-nav w-100 mb-1" style="border-bottom-style: ridge;"></div>
-            <div class="navbar-nav w-100">
 
-                <a href="index_admin.php" class="nav-item nav-link"><i class="fas fa-home me-2"></i>홈 화면</a>
+            <div class="navbar-nav">
+                <a href="index_admin.php" class="nav-item nav-link"><i class="fas fa-home me-2"></i> 홈 화면 이동</a>
                 <a href="reservation/reservation_form.php" class="nav-item nav-link"><i
-                        class="fas fa-calendar-alt me-2"></i> 컨설턴트 페이지</a>
+                        class="fas fa-calendar-alt me-2"></i>
+                    컨설턴트 페이지</a>
                 <a href="#" class="nav-item nav-link" onclick="showSection('consultantSection')"><i
-                        class="fas fa-user-tie me-2"></i> 컨설턴트 권한 승인</a>
+                        class="fas fa-user-tie me-2"></i> 컨설턴트 권한 부여</a>
                 <a href="#" class="nav-item nav-link" onclick="showSection('analystSection')"><i
-                        class="fas fa-search me-2"></i> 분석가 권한 승인</a>
+                        class="fas fa-search me-2"></i>
+                    지문 분석가 권한 부여</a>
                 <a href="#" class="nav-item nav-link" onclick="showSection('reservationApprovalSection')"><i
                         class="fas fa-check me-2"></i> 예약 승인 관리</a>
             </div>
@@ -359,9 +286,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 
+
     <div class="content">
         <div id="consultantSection" class="section mt-4">
-            <h2>컨설턴트</h2>
+            <h2>컨설턴트 관리</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -375,38 +303,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </thead>
                 <tbody>
                     <?php foreach ($consultants as $row): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($row['id']) ?></td>
-                        <td><?= htmlspecialchars($row['name']) ?></td>
-                        <td><?= htmlspecialchars($row['phone_number']) ?></td>
-                        <td><?= htmlspecialchars($row['country'] . ' ' . $row['MC'] . ' ' . $row['CC']) ?></td>
-                        <td><?= htmlspecialchars($row['consultant_code']) ?></td>
-                        <td>
-                            <form method="post">
-                                <button type="submit" name="consultant_toggle" value="<?= $row['id'] ?>"
-                                    class="btn <?= $row['consultant'] === 'pass' ? 'btn-revoke' : 'btn-approve' ?>">
-                                    <?= $row['consultant'] === 'pass' ? '해지하기' : '승인하기' ?>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?= htmlspecialchars($row['id']) ?></td>
+                            <td><?= htmlspecialchars($row['name']) ?></td>
+                            <td><?= htmlspecialchars($row['phone_number']) ?></td>
+                            <td><?= htmlspecialchars($row['country'] . ' ' . $row['MC'] . ' ' . $row['CC']) ?></td>
+                            <td><?= htmlspecialchars($row['consultant_code']) ?></td>
+                            <td>
+                                <form method="post">
+                                    <button type="submit" name="consultant_toggle" value="<?= $row['id'] ?>"
+                                        class="btn <?= $row['consultant'] === 'pass' ? 'btn-revoke' : 'btn-approve' ?>">
+                                        <?= $row['consultant'] === 'pass' ? '해지하기' : '승인하기' ?>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
 
             <nav>
                 <ul class="pagination justify-content-center">
-                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                    <li class="page-item <?= $i == $page ? 'active' : '' ?>">
-                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                    <!-- Previous Page Link -->
+                    <li class="page-item <?= ($page <= 1) ? 'disabled' : '' ?>">
+                        <a class="page-link" href="<?= ($page > 1) ? '?page=' . ($page - 1) : '#' ?>"
+                            aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
                     </li>
+
+                    <!-- Page Number Links -->
+                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                        <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                            <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                        </li>
                     <?php endfor; ?>
+
+                    <!-- Next Page Link -->
+                    <li class="page-item <?= ($page >= $total_pages) ? 'disabled' : '' ?>">
+                        <a class="page-link" href="<?= ($page < $total_pages) ? '?page=' . ($page + 1) : '#' ?>"
+                            aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
 
         <div id="analystSection" class="section mt-4">
-            <h2>지문분석 전문가</h2>
+            <h2>지문 분석가 권한 부여 관리</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -420,32 +365,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </thead>
                 <tbody>
                     <?php foreach ($consultants as $row): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($row['id']) ?></td>
-                        <td><?= htmlspecialchars($row['name']) ?></td>
-                        <td><?= htmlspecialchars($row['phone_number']) ?></td>
-                        <td><?= htmlspecialchars($row['country'] . ' ' . $row['MC'] . ' ' . $row['CC']) ?></td>
-                        <td><?= htmlspecialchars($row['consultant_code']) ?></td>
-                        <td>
-                            <form method="post">
-                                <button type="submit" name="analyst_toggle" value="<?= $row['id'] ?>"
-                                    class="btn <?= $row['analyst'] === 'pass' ? 'btn-revoke' : 'btn-approve' ?>">
-                                    <?= $row['analyst'] === 'pass' ? '해지하기' : '승인하기' ?>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?= htmlspecialchars($row['id']) ?></td>
+                            <td><?= htmlspecialchars($row['name']) ?></td>
+                            <td><?= htmlspecialchars($row['phone_number']) ?></td>
+                            <td><?= htmlspecialchars($row['country'] . ' ' . $row['MC'] . ' ' . $row['CC']) ?></td>
+                            <td><?= htmlspecialchars($row['consultant_code']) ?></td>
+                            <td>
+                                <form method="post">
+                                    <button type="submit" name="analyst_toggle" value="<?= $row['id'] ?>"
+                                        class="btn <?= $row['analyst'] === 'pass' ? 'btn-revoke' : 'btn-approve' ?>">
+                                        <?= $row['analyst'] === 'pass' ? '해지하기' : '승인하기' ?>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
 
             <nav>
                 <ul class="pagination justify-content-center">
-                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                    <li class="page-item <?= $i == $page ? 'active' : '' ?>">
-                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                    <!-- Previous Page Link -->
+                    <li class="page-item <?= ($page <= 1) ? 'disabled' : '' ?>">
+                        <a class="page-link" href="<?= ($page > 1) ? '?page=' . ($page - 1) : '#' ?>"
+                            aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
                     </li>
+
+                    <!-- Page Number Links -->
+                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                        <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                            <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                        </li>
                     <?php endfor; ?>
+
+                    <!-- Next Page Link -->
+                    <li class="page-item <?= ($page >= $total_pages) ? 'disabled' : '' ?>">
+                        <a class="page-link" href="<?= ($page < $total_pages) ? '?page=' . ($page + 1) : '#' ?>"
+                            aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -457,13 +419,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <tr>
                         <th>컨설턴트 이름</th>
                         <th>장소</th>
-                        <th>날짜</th>
-                        <th>시간</th>
+                        <th>예약 날짜</th>
+                        <th>예약 시간</th>
                         <th>국가</th>
                         <th>MC</th>
                         <th>CC</th>
                         <th>예상 인원</th>
-                        <th>컨설턴트 인원</th>
+                        <th>컨설턴트<br>추가인원</th>
                         <th>제출 시각</th>
                         <th>1차 승인</th>
                         <th>최종 승인</th>
@@ -471,57 +433,75 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </thead>
                 <tbody>
                     <?php if (!empty($reservations)): ?>
-                    <?php foreach ($reservations as $reservation): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($reservation['consultant_name']) ?></td>
-                        <td><?= htmlspecialchars($reservation['location']) ?></td>
-                        <td><?= htmlspecialchars($reservation['date']) ?></td>
-                        <td><?= htmlspecialchars($reservation['time']) ?></td>
-                        <td><?= htmlspecialchars($reservation['country']) ?></td>
-                        <td><?= htmlspecialchars($reservation['MC']) ?></td>
-                        <td><?= htmlspecialchars($reservation['CC']) ?></td>
-                        <td><?= htmlspecialchars($reservation['people_num']) ?></td>
-                        <td><?= htmlspecialchars($reservation['con_num']) ?></td>
-                        <td><?= htmlspecialchars($reservation['submitted_at']) ?></td>
-                        <td>
-                            <?php if (empty($reservation['pass']) || $reservation['pass'] === 'false'): ?>
-                            <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'true')"
-                                class="btn btn-success">1차 승인</button>
-                            <?php elseif ($reservation['pass'] === 'true'): ?>
-                            <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'false')"
-                                class="btn btn-danger">1차 승인 취소</button>
-                            <?php else: ?>
-                            <span>승인 완료</span>
-                            <?php endif; ?>
-                        </td>
-                        <td>
-                            <?php if ($reservation['pass'] === 'true'): ?>
-                            <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'complete')"
-                                class="btn btn-success">최종 승인</button>
-                            <?php elseif ($reservation['pass'] === 'complete'): ?>
-                            <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'true')"
-                                class="btn btn-danger">최종 승인 취소</button>
-                            <?php else: ?>
-                            <span>승인 대기</span>
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
+                        <?php foreach ($reservations as $reservation): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($reservation['consultant_name']) ?></td>
+                                <td><?= htmlspecialchars($reservation['location']) ?></td>
+                                <td><?= htmlspecialchars($reservation['date']) ?></td>
+                                <td><?= htmlspecialchars($reservation['time']) ?></td>
+                                <td><?= htmlspecialchars($reservation['country']) ?></td>
+                                <td><?= htmlspecialchars($reservation['MC']) ?></td>
+                                <td><?= htmlspecialchars($reservation['CC']) ?></td>
+                                <td><?= htmlspecialchars($reservation['people_num']) ?></td>
+                                <td><?= htmlspecialchars($reservation['con_num']) ?></td>
+                                <td><?= htmlspecialchars($reservation['submitted_at']) ?></td>
+                                <td>
+                                    <?php if (empty($reservation['pass']) || $reservation['pass'] === 'false'): ?>
+                                        <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'true')"
+                                            class="btn btn-success">1차 승인</button>
+                                    <?php elseif ($reservation['pass'] === 'true'): ?>
+                                        <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'false')"
+                                            class="btn btn-danger">1차 승인 취소</button>
+                                    <?php else: ?>
+                                        <span>승인 완료</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <?php if ($reservation['pass'] === 'true'): ?>
+                                        <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'complete')"
+                                            class="btn btn-success">최종 승인</button>
+                                    <?php elseif ($reservation['pass'] === 'complete'): ?>
+                                        <button onclick="toggleApproval(<?= $reservation['idx'] ?>, 'true')"
+                                            class="btn btn-danger">최종 승인 취소</button>
+                                    <?php else: ?>
+                                        <span>승인 대기</span>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     <?php else: ?>
-                    <tr>
-                        <td colspan="12">등록된 예약 정보가 없습니다.</td>
-                    </tr>
+                        <tr>
+                            <td colspan="12">등록된 예약 정보가 없습니다.</td>
+                        </tr>
                     <?php endif; ?>
                 </tbody>
             </table>
 
             <nav>
                 <ul class="pagination justify-content-center">
-                    <?php for ($i = 1; $i <= $total_reservation_pages; $i++): ?>
-                    <li class="page-item <?= $i == $page ? 'active' : '' ?>">
-                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                    <!-- Previous Page Link -->
+                    <li class="page-item <?= ($page <= 1) ? 'disabled' : '' ?>">
+                        <a class="page-link" href="<?= ($page > 1) ? '?page=' . ($page - 1) : '#' ?>"
+                            aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
                     </li>
+
+                    <!-- Page Number Links -->
+                    <?php for ($i = 1; $i <= $total_reservation_pages; $i++): ?>
+                        <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                            <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                        </li>
                     <?php endfor; ?>
+
+                    <!-- Next Page Link -->
+                    <li class="page-item <?= ($page >= $total_reservation_pages) ? 'disabled' : '' ?>">
+                        <a class="page-link"
+                            href="<?= ($page < $total_reservation_pages) ? '?page=' . ($page + 1) : '#' ?>"
+                            aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

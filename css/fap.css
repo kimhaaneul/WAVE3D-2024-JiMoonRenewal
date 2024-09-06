@@ -75,7 +75,6 @@ a {
     margin-bottom: 10px;
     padding: 15px;
     cursor: pointer;
-    
 }
 
 .faq-list-li:hover {
@@ -83,23 +82,35 @@ a {
     cursor: pointer;
 }
 
-.faq-q{
+.faq-q {
     font-size: 18pt;
     font-family: "Pretendard SemiBold";
     text-align: left;
     padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.faq-a{  
+.faq-list-li.active .faq-q {
+    color: #E95305;
+}
+
+.faq-a {  
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
 
-.faq-a p{
+.faq-a p {
     padding: 5px;
     font-family: "Pretendard Light";
     font-size: 14pt;
+    color: black;
+    text-align: left;
+    margin-left: 6%;
+}
+
+.faq-list-li.active .faq-a p {
+    color: black;
 }
 
 .active .faq-a {
@@ -122,10 +133,413 @@ a {
 }
 
 .pagination button.active {
-    background-color: #ddd;
+    background-color:#E95305;
+    color:#fff;
 }
 
 .pagination button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }
+
+/* =================== 1025~1500px 해상도 =======================*/
+@media screen and (min-width : 1025px) and (max-width:1024px){
+    #contant1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    
+    
+    #jm-contant-box1{
+        display: flex;
+        margin-top: 20px;
+        margin-right: 58%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 60%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: 6px;
+        font-size: 24pt;
+    }
+    
+    #jm-contant-box2{
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    #jm-contant-box3{
+        width: 800px;
+        background-color : #E95305;
+        height: 2px;
+    }
+    
+    /* =============== fap list =================*/
+    #faq-list {
+        list-style-type: none;
+        width: 800px;
+        height: 550px;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: -8%;
+    }
+    
+    .faq-list-li {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    
+    .faq-list-li:hover {
+        color: #E95305;
+        cursor: pointer;
+    }
+    
+    .faq-q {
+        font-size: 14pt;
+        font-family: "Pretendard SemiBold";
+        text-align: left;
+        padding: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .faq-list-li.active .faq-q {
+        color: #E95305;
+    }
+    
+    .faq-a {  
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    .faq-a p {
+        padding: 5px;
+        font-family: "Pretendard Light";
+        font-size: 12pt;
+        color: black;
+        text-align: left;
+        margin-left: 6%;
+    }
+    
+    .faq-list-li.active .faq-a p {
+        color: black;
+    }
+    
+    .active .faq-a {
+        max-height: auto;
+    }
+    
+    /* ============= 버튼 ============*/
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .pagination button {
+        padding: 10px 15px;
+        margin: 0 5px;
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .pagination button.active {
+        background-color:#E95305;
+        color:#fff;
+    }
+    
+    .pagination button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+}
+
+/* =================== 800~1024px까지 해상도 =======================*/
+@media screen and (min-width : 800px) and (max-width:1024px){
+    #contant1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    
+    
+    #jm-contant-box1{
+        display: flex;
+        margin-top: 20px;
+        margin-right: 58%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 60%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: 6px;
+        font-size: 24pt;
+    }
+    
+    #jm-contant-box2{
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    #jm-contant-box3{
+        width: 800px;
+        background-color : #E95305;
+        height: 2px;
+    }
+    
+    /* =============== fap list =================*/
+    #faq-list {
+        list-style-type: none;
+        width: 800px;
+        height: 550px;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: -8%;
+    }
+    
+    .faq-list-li {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    
+    .faq-list-li:hover {
+        color: #E95305;
+        cursor: pointer;
+    }
+    
+    .faq-q {
+        font-size: 14pt;
+        font-family: "Pretendard SemiBold";
+        text-align: left;
+        padding: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .faq-list-li.active .faq-q {
+        color: #E95305;
+    }
+    
+    .faq-a {  
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    .faq-a p {
+        padding: 5px;
+        font-family: "Pretendard Light";
+        font-size: 12pt;
+        color: black;
+        text-align: left;
+        margin-left: 6%;
+    }
+    
+    .faq-list-li.active .faq-a p {
+        color: black;
+    }
+    
+    .active .faq-a {
+        max-height: auto;
+    }
+    
+    /* ============= 버튼 ============*/
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .pagination button {
+        padding: 10px 15px;
+        margin: 0 5px;
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .pagination button.active {
+        background-color:#E95305;
+        color:#fff;
+    }
+    
+    .pagination button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+}
+
+/* =================== ~790px까지 해상도 =======================*/
+@media screen and (min-width:350px) and (max-width:799px){
+    #contant1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    
+    
+    #jm-contant-box1{
+        display: flex;
+        margin-top: 20px;
+        margin-right: 48%;
+        align-items: center;
+        margin-bottom: 2%;
+      }
+    
+      #jm-contant-box1 img{
+        width: 60%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: -6px;
+        font-size: 16pt;
+    }
+    
+    #jm-contant-box2{
+        display: flex;
+        text-align: center;
+    }
+
+    #jm-contant-box2 h2{
+        margin-top: 5%;
+        font-size: 13pt;
+        width: 200px;
+    } 
+    
+    #jm-contant-box3{
+        width: 80%;
+        background-color : #E95305;
+        height: 2px;
+    }
+    
+    /* =============== fap list =================*/
+    #faq-list {
+        list-style-type: none;
+        width: 80%;
+        height: 550px;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: -8%;
+    }
+    
+    .faq-list-li {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    
+    .faq-list-li:hover {
+        color: #E95305;
+        cursor: pointer;
+    }
+    
+    .faq-q {
+        font-size: 13pt;
+        font-family: "Pretendard SemiBold";
+        text-align: left;
+        padding: 8px;
+        transition: color 0.3s ease;
+    }
+    
+    .faq-list-li.active .faq-q {
+        color: #E95305;
+    }
+    
+    .faq-a {  
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    .faq-a p {
+        padding: 5px;
+        font-family: "Pretendard Light";
+        font-size: 12pt;
+        color: black;
+        text-align: left;
+        margin-left: 6%;
+    }
+    
+    .faq-list-li.active .faq-a p {
+        color: black;
+    }
+    
+    .active .faq-a {
+        max-height: auto;
+    }
+    
+    /* ============= 버튼 ============*/
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .pagination button {
+        padding: 10px 15px;
+        margin: 0 5px;
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .pagination button.active {
+        background-color:#E95305;
+        color:#fff;
+    }
+    
+    .pagination button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+}
+
+

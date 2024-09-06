@@ -1,3 +1,4 @@
+
 * {
     margin :0;
     font-family: "Pretendard Thin","Pretendard Light","Pretendard Medium","Pretendard Regular",
@@ -59,7 +60,7 @@ a {
     margin-right: 10px;
 }
 
-/*  === jm-contant-box 1,2,3 건들기 금지 : 다른 css에서 공유중 ==== */
+/*  === 지문 적성 검사란? ==== */
 
 #jm-introduction-box4{
     display: flex;
@@ -84,7 +85,7 @@ a {
 
 #jm-box6-textbox{
     padding: 20px;
-    font-size: 16pt;
+    font-size: 14pt;
     background-color: #F7F7F7;
     border-radius: 10px;
     text-align: left;
@@ -228,3 +229,695 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: "Pretendard Light";
     line-height: 1.5;
 }
+
+/* ================== 1025~1500px 해상도 ========================*/
+@media screen and (min-width : 1025px) and (max-width:1500px){
+
+    #contant1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        margin-bottom: 3%;
+    }
+    
+    
+    #jm-contant-box1{
+        display: flex;
+        margin-top: 20px;
+        margin-right: 60%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 75%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: 10pt;
+        font-size: 28pt;
+    }
+    
+    #jm-contant-box2{
+        display: flex;
+        margin-right: 61%;
+    }
+    
+    #jm-contant-box3{
+        width: 5px;
+        background-color : #E95305;
+        height: 26px;
+        margin-right: 10px;
+    }
+    
+    /*  === 지문 적성 검사란? ==== */
+    
+    #jm-introduction-box4{
+        display: flex;
+    }
+    
+    #jm-introduction-box6 h2{
+        margin-left: -70px;
+        font-size: 21pt;
+        display: flex;
+        margin-bottom: 20px
+    }
+    
+    #jm-introduction-box5 img{
+        width: 45%;
+        margin-top: 30%
+    }
+    
+    #jm-contant-box6{    
+        font-size: 13pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+    }
+    
+    #jm-box6-textbox{
+        margin-left: -70px;
+        max-width: 670px;
+        padding: 18px;
+        font-size: 13pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        text-align: left;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #jm-box6-textbox img{
+        width: 15px;
+    }
+    
+    #jm-box6-textbox span{
+        font-family: "Pretendard Light";
+        font-size: 14pt;
+        line-height: 1.4;
+    }
+    
+    
+    #fg_introduction_list li{
+    margin-bottom: 8%;
+    
+    }
+    
+    /* ============= 섹션2 ============== */
+    #contant2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        background-color: #fff8f4;   
+    }
+    
+    #jm-introduction-box7 ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: -10px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        max-width:1000px;
+        margin-left: 7%;
+    }
+    
+    
+    #jm-introduction-list{
+    width: 300px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    #jm-introduction-list h3{
+        font-size: 18pt;
+        font-family: "Pretendard Light";
+        padding: 9px;
+    }
+    
+    #jm-introduction-list img{
+        margin-top: 20px;
+    }
+    
+    #jm-introduction-box9{    
+        margin : 20px
+    }
+    
+    #jm-introduction-list span{
+        font-size: 12pt;
+        font-family: "Pretendard Light";
+        line-height: 1.4;
+    }
+    
+    #jm-introduction-list hr{
+        width: 150px;
+        border: #E95305 solid 1px;
+        margin: 20px auto;
+    
+    }
+    
+    #contant2 #jm-contant-box2{
+        margin-top: 2%;
+    }
+    
+    #jm-introduction-box8 img{
+        width: 80%;
+    }
+    
+    /* ======= 지문의 특 장점 =======*/
+    
+    #contant3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+    }
+    
+    #contant3 #jm-contant-box2{
+        margin-top: 2%;
+    }
+    
+    #jm-intruduction-box10{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #jm-intruduction-box10 h3{
+        font-family:  "Pretendard SemiBold";
+        font-size: 18pt;
+        padding:18px;
+    }
+    
+    #jm-intruduction-box10 div {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    
+    #jm-intrudction-box11{
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: 140px;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+        display: contents;
+        justify-content: center;
+    }
+    
+    #jm-intrudction-box11 span{
+        font-size: 12pt;
+        font-family: "Pretendard Light";
+        line-height: 1.4;
+    }
+
+}
+
+
+/* =================== 800~1024px까지 해상도 =======================*/
+@media screen and (min-width: 800px) and (max-width:1024px){
+
+    #contant1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        margin-bottom: 3%;
+    }
+    
+    
+    #jm-contant-box1{
+        display: flex;
+        margin-top: 30px;
+        margin-right: 65%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 60%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: 5pt;
+        font-size: 22pt;
+    }
+    
+    #jm-contant-box2{
+        display: flex;
+        margin-right: 60%;
+    }
+    
+    #jm-contant-box3{
+        width: 5px;
+        background-color : #E95305;
+        height: 24px;
+        margin-right: 10px;
+        font-size: 16pt;
+    }
+
+    
+    /*  === 지문 적성 검사란? ==== */
+    
+    #jm-introduction-box4{
+        display: flex;
+    }
+    
+    #jm-introduction-box6 h2{
+        margin-left: -20%;
+        font-size: 17pt;
+        display: flex;
+        margin-bottom: 15px
+    }
+    
+    #jm-introduction-box5 img{
+        width: 40%;
+        margin-top: 30%;
+        margin-right:20%;
+    }
+    
+    #jm-contant-box6{    
+        font-size: 10pt;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+    }
+    
+    #jm-box6-textbox{
+        margin-left: -20%;
+        max-width: 580px;
+        padding: 18px;
+        font-size: 10pt;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+        text-align: left;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #jm-box6-textbox img{
+        width: 15px;
+    }
+    
+    #jm-box6-textbox span{
+        font-family: "Pretendard Light";
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    
+    #fg_introduction_list li{
+    margin-bottom: 8%;
+    
+    }
+    
+    /* ============= 섹션2 ============== */
+    #contant2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        background-color: #fff8f4;   
+    }
+    
+    #jm-introduction-box7 ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: -10px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        max-width: 880px;
+        margin-left: 7%;
+    }
+    
+    
+    #jm-introduction-list{
+    width: 300px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    #jm-introduction-list h3{
+        font-size: 18pt;
+        font-family: "Pretendard Light";
+        padding: 9px;
+    }
+    
+    #jm-introduction-list img{
+        margin-top: 20px;
+    }
+    
+    #jm-introduction-box9{    
+        margin : 20px
+    }
+    
+    #jm-introduction-list span{
+        font-size: 12pt;
+        font-family: "Pretendard Light";
+        line-height: 1.4;
+    }
+    
+    #jm-introduction-list hr{
+        width: 150px;
+        border: #E95305 solid 1px;
+        margin: 20px auto;
+    
+    }
+    
+    #contant2 #jm-contant-box2{
+        margin-top: 2%;
+    }
+    
+    #jm-introduction-box8 img{
+        width: 80%;
+    }
+    
+    /* ======= 지문의 특 장점 =======*/
+    
+    #contant3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+    }
+    
+    #contant3 #jm-contant-box2{
+        margin-top: 2%;
+    }
+    
+    #jm-intruduction-box10{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #jm-intruduction-box10 h3{
+        font-family:  "Pretendard SemiBold";
+        font-size: 15pt;
+        padding:15px;
+    }
+    
+    #jm-intruduction-box10 div {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    #jm-intruduction-box10 img{
+        width: 70px;
+        height: auto;
+    }
+
+    
+    #jm-intrudction-box11{
+        background-color: #ffffff;
+        padding: 18px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: 120px;
+        width: 240px;
+        border-radius: 10px;
+        text-align: center;
+        display: contents;
+        justify-content: center;
+    }
+    
+    #jm-intrudction-box11 span{
+        font-size: 11pt;
+        font-family: "Pretendard Light";
+        line-height: 1.3;
+    }
+
+
+
+
+
+
+}
+
+/* =================== ~790px까지 해상도 =======================*/
+@media screen and (min-width:350px) and (max-width:799px){
+
+    #contant1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        padding: 0px 20px;
+        margin-bottom: 3%;
+    }
+     
+    #jm-contant-box1{
+        display: flex;
+        margin-top: 30px;
+        margin-right: 10%;
+        align-items: center;
+        margin-bottom: 2%;
+        width: 100%;
+    
+      }
+
+      #jm-contant-box2{
+        margin-left: -3%;
+      }
+    
+      #jm-contant-box1 img{
+        width: 50%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: -8px;
+        font-size: 16pt;
+    }
+
+    #jm-contant-box {
+        margin-left: -55px;
+    }
+
+    #jm-contant-box2 h2{
+        font-size: 13pt;
+        margin-bottom: 30px;
+        margin-left: -55px;
+    }
+    
+    #jm-contant-box3{
+        width: 5px;
+        background-color : #E95305;
+        height: 22px;
+        margin-right: 60px;
+        font-size: 16pt;
+    }
+
+    
+    /*  === 지문 적성 검사란? ==== */
+    
+    #jm-introduction-box4{
+        display: flex;
+    }
+    
+    #jm-introduction-box6 h2{
+        font-size: 12pt;
+        display: block;
+        margin-bottom: 15px
+    }
+    
+    #jm-introduction-box5 img{
+        display: none;
+    }
+    
+    #jm-contant-box6{    
+        font-size: 10pt;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+    }
+    
+    #jm-box6-textbox{
+        max-width: 450px;
+        padding: 18px;
+        font-size: 10pt;
+        background-color: #F7F7F7;
+        border-radius: 8px;
+        text-align: left;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #jm-box6-textbox img{
+        width: 15px;
+    }
+    
+    #jm-box6-textbox span{
+        font-family: "Pretendard Light";
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+    
+    
+    #fg_introduction_list li{
+    margin-bottom: 8%;
+    
+    }
+    
+    /* ============= 섹션2 ============== */
+    #contant2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        background-color: #fff8f4;  
+        padding: 0px 20px; 
+    }
+    
+    #jm-introduction-box7 ul{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: -10px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        max-width: 400px;
+        margin-left: 3%;
+    }
+    
+    #jm-introduction-list{
+    width: 300px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    #jm-introduction-list h3{
+        font-size: 10pt;
+        font-family: "Pretendard Light";
+        padding: 9px;
+    }
+    
+    #jm-introduction-list img{
+        margin-top: 20px;
+        width: 30%;
+    }
+    
+    #jm-introduction-box9{    
+        margin : 20px
+    }
+    
+    #jm-introduction-list span{
+        font-size: 10pt;
+        font-family: "Pretendard Light";
+        line-height: 1.4;
+    }
+    
+    #jm-introduction-list hr{
+display: none;
+    
+    }
+
+    #text-hide{
+        display: none;
+    }
+    
+    #contant2 #jm-contant-box2{
+        margin-top: 2%;
+    }
+    
+    #jm-introduction-box8 img{
+        width: 70%;
+    }
+    
+    /* ======= 지문의 특 장점 =======*/
+    
+    #contant3{
+        display: none;
+    }
+    
+    #contant3 #jm-contant-box2{
+        margin-top: 2%;
+    }
+    
+    #jm-intruduction-box10{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #jm-intruduction-box10 h3{
+        font-family:  "Pretendard SemiBold";
+        font-size: 13pt;
+        padding:13px;
+    }
+    
+    #jm-intruduction-box10 div {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    #jm-intruduction-box10 img{
+        width: 70px;
+        height: auto;
+    }
+
+    
+    #jm-intrudction-box11{
+    display: none;
+    }
+    
+    #jm-intrudction-box11 span{
+        display: none;
+    }
+
+
+
+
+
+
+}
+

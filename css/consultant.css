@@ -17,7 +17,8 @@ li {
 .cap-jm {
     display: flex;
     justify-content: center;
-    margin: 5% 0;
+   margin-top: 16%;
+   margin-bottom: 1%;
 }
 
 .consultant-img{
@@ -33,7 +34,6 @@ li {
 }
 
 
-
 .consultant-container a{
     color: black;
 }
@@ -41,6 +41,7 @@ li {
 .consultant-container span{
     text-decoration: none;
     cursor: default;
+    font-size: 14pt;
 }
 
 .consultant-container a:hover {

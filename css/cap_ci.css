@@ -69,3 +69,207 @@
   #box1{
     padding: 50px;
   }
+
+  /* ================== 1025~1500px 해상도 ========================*/
+@media screen and (min-width : 1025px) and (max-width:1500px){
+
+  #content1, #content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+  }
+
+  #cap-textbox{
+    margin-top: 3%;
+    font-size: 25pt;
+    padding: 20px;
+    color: #3d3d3d;
+    margin-bottom: 20px;
+  }
+
+  #cap-textbox h2{
+    font-family: "Pretendard Medium";
+  }
+
+  #cap-textbox2 h2{
+    font-size: 25pt;
+    margin-bottom: 20px;
+    font-family: "Pretendard Light";
+  }
+  
+  #text-bold{
+    font-weight: bold;
+  }
+
+  #ci-img-box img{
+    width: 80%;
+  }
+  
+  #cap-textbox3{
+    padding: 20px; 
+  }
+
+  #cap-textbox3 p{
+    font-size: 14pt;
+    line-height: 1.7;
+    font-family: "Pretendard Light";
+  }
+
+  .ci-line{
+    width: 50%;
+    color: #E95305;
+    border: 1px solid;
+  }
+
+  /* ============= 섹션2 시작 ==============*/
+
+  #content2 #cap-textbox2{
+    margin : 2%;
+    color: #E95305;
+  }
+
+  #box1{
+    padding: 50px;
+  }
+
+
+}
+
+
+/* =================== ~1024px까지 해상도(모바일x) =======================*/
+@media screen and (min-width:800px) and (max-width:1024px){
+
+  #content1, #content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+  }
+
+  #cap-textbox{
+    margin-top: 4%;
+    font-size: 20pt;
+    padding: 18px;
+    color: #3d3d3d;
+    margin-bottom: 18px;
+  }
+
+  #cap-textbox h2{
+    font-family: "Pretendard Medium";
+  }
+
+  #cap-textbox2 h2{
+    font-size: 20pt;
+    margin-bottom: 18px;
+    font-family: "Pretendard Light";
+  }
+  
+  #text-bold{
+    font-weight: bold;
+  }
+
+  #ci-img-box img{
+    width: 68%;
+  }
+  
+  #cap-textbox3{
+    padding: 20px; 
+  }
+
+  #cap-textbox3 p{
+    font-size: 14pt;
+    line-height: 1.7;
+    font-family: "Pretendard Light";
+  }
+
+  .ci-line{
+    width: 50%;
+    color: #E95305;
+    border: 1px solid;
+  }
+
+  /* ============= 섹션2 시작 ==============*/
+
+  #content2 #cap-textbox2{
+    margin : 2%;
+    color: #E95305;
+  }
+
+  #box1{
+    padding: 50px;
+  }
+
+
+}
+
+/* =================== ~1024px까지 해상도(모바일x) =======================*/
+@media (max-width:580px){
+
+  #content1, #content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+  }
+
+  #cap-textbox{
+    margin-top: 4%;
+    font-size: 20pt;
+    padding: 18px;
+    color: #3d3d3d;
+    margin-bottom: 18px;
+  }
+
+  #cap-textbox h2{
+    font-family: "Pretendard Medium";
+  }
+
+  #cap-textbox2 h2{
+    font-size: 20pt;
+    margin-bottom: 18px;
+    font-family: "Pretendard Light";
+  }
+  
+  #text-bold{
+    font-weight: bold;
+  }
+
+  #ci-img-box img{
+    width: 70%;
+  }
+  
+  #cap-textbox3{
+    width: 85%;
+    padding: 16px;
+  }
+
+  #cap-textbox3 p{
+    font-size: 11pt;
+    line-height: 1.6;
+    font-family: "Pretendard Light";
+  }
+
+  .ci-line{
+    width: 70%;
+    color: #E95305;
+    border: 1px solid;
+  }
+
+  /* ============= 섹션2 시작 ==============*/
+
+  #content2 #cap-textbox2{
+    margin : 2%;
+    color: #E95305;
+  }
+
+  #box1{
+    padding: 50px;
+  }
+
+
+}
+

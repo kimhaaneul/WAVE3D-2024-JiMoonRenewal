@@ -1,6 +1,7 @@
 * {
     margin :0;
-    font-family: "Pretendard Thin","Pretendard Light","Pretendard Medium","Pretendard Regular",
+    font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif",
+    "Pretendard Thin","Pretendard Light","Pretendard Medium","Pretendard Regular",
     "Pretendard SemiBold","Pretendard Regular";
 }
 
@@ -13,15 +14,45 @@ a {
     list-style: none;
   }
 
-  #contant1{
+  #inquiry-box1{
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;    
-    text-align: center;
+  }
+
+  #inquiry-box1 img {
+    width: 50%;
+    height: auto;
+    max-width: 100%;
 }
 
-#inpuiry-box1 img{
-  width: 100%;
+/* ============= 1025~1500px 해상도 ============= */
+@media screen and (min-width:1025px) and (max-width:1500px){
+
+  #inquiry-box1 img {
+    width: 60%;
+    height: auto;
+    max-width: 100%;
+}
+
+}
+
+/* ============= 800~1024px 해상도 ============= */
+@media screen and (min-width:800px) and (max-width:1024px){
+  #inquiry-box1 img {
+    width: 65%;
+    height: auto;
+    max-width: 100%;
+}
+
+}
+
+/* ============= ~799 ============= */
+@media screen and (min-width:350px) and (max-width:799px){
+  #inquiry-box1 img {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+}
 
 }

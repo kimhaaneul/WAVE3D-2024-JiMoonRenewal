@@ -37,55 +37,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <?php if ($id_found || $_SERVER["REQUEST_METHOD"] == "POST"): ?>
-    <div class="message-container">
-        <p><?php echo $id_message; ?></p>
+        <div class="message-container">
+            <p><?php echo $id_message; ?></p>
 
-    </div>
-    <a href="adminLogin.php" class="confirm-button">확인</a>
+        </div>
+        <a href="adminLogin.php" class="confirm-button">확인</a>
 
     <?php else: ?>
 
-    <div class="id-logo">
-        <a href="/adminLogin.php">
-            <img src="/img/cap-jm.png">
-        </a>
-    </div>
-    <h2 class="id-title">아이디 찾기</h2>
-
-    <div class="id-container">
-        <form method="post" action="">
-            <div class="id-form">
-                <label for="name">이름</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="id-form">
-                <label for="phone_number">가입한 휴대폰 번호</label>
-                <input type="text" id="phone_number" name="phone_number" required>
-            </div>
-
-            <div class="id-form">
-                <label for="e_mail">가입한 이메일</label>
-                <input type="email" id="e_mail" name="e_mail" required>
-            </div>
-
-            <div class="button-container">
-                <input type="button" value="취소" onclick="goBack()" class="confirm-button">
-                <input type="submit" value="아이디 찾기" class="confirm-button">
-            </div>
-        </form>
-        <div class="password-recovery">
-            <a href="findPW.php">비밀번호를 잃어버리셨나요?</a>
+        <div class="id-logo">
+            <a href="/adminLogin.php">
+                <img src="/img/cap-jm.png">
+            </a>
         </div>
-    </div>
+        <h2 class="id-title">아이디 찾기</h2>
+
+        <div class="id-container">
+            <form method="post" action="">
+                <div class="id-form">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="id-form">
+                    <label for="phone_number">가입한 휴대폰 번호</label>
+                    <input type="text" id="phone_number" name="phone_number" required>
+                </div>
+
+                <div class="id-form">
+                    <label for="e_mail">가입한 이메일</label>
+                    <input type="email" id="e_mail" name="e_mail" required>
+                </div>
+
+                <div class="button-container">
+                    <input type="button" value="취소" onclick="goBack()" class="confirm-button">
+                    <input type="submit" value="아이디 찾기" class="confirm-button">
+                </div>
+            </form>
+            <div class="password-recovery">
+                <a href="find_password.php">비밀번호를 잃어버리셨나요?</a>
+            </div>
+        </div>
 
     <?php endif; ?>
 
 
     <script>
-    function goBack() {
-        window.history.back();
-    }
+        function goBack() {
+            window.history.back();
+        }
     </script>
 
 </body>

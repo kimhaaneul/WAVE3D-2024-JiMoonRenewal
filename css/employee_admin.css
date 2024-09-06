@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    font-family: Pretendard Light, Pretendard Regular, Pretendard Medium, Pretendard SemiBold,
+        Pretendard Bold, Pretendard ExtraBold;
+}
+
+
+.sidebar-logout {
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #FF274B;
+    color: #ffffff !important;
+    border :none !important;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box;
+    text-align: center !important;
+    font-size: 12pt;
+    padding: 5px !important;
+    margin-right: 20px;
+
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-btn-box a {
+    border: none;
+}
+
+.sidebar-jm-box{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-jm-box img{
+    width: 90%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    background-color:#EBEBEB;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #343a40;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #474f54;
+}
+
+
+.sidebar a:hover {
+    background-color: #495057;
+    color: white;
+}
+
+.navbar-nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-nav i{
+    margin-left: 20px;
+}
+
+.navbar{
+    background-color: #EBEBEB;
+    color: #343a40;
+    padding: 0px;
+    display: block;
+}
+
+
+
+/* 사이드바 끝 */
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.btn-approve {
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-approve:hover {
+    background-color: #218838;
+}
+
+.btn-revoke {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-revoke:hover {
+    background-color: #c82333;
+}
+
+table.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table.table th,
+table.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+h2 {
+    color: #343a40;
+    border-bottom: 2px solid #343a40;
+    padding-bottom: 10px;
+}
+
+.section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* 페이지 네비게이션 스타일 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.page-item {
+    display: inline;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #FF6700;
+    border-color:#FF6700;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: #FF6700;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    line-height: 1.25;
+    
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-link:focus {
+    z-index: 2;
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-link:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.page-link.disabled {
+    pointer-events: none;
+    color: #6c757d;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+/* 테이블 너비 조절 */
+table.table th:nth-child(1), 
+table.table td:nth-child(1) {
+    width: 8%;
+}
+
+table.table th:nth-child(2), /* 장소 */
+table.table td:nth-child(2) {
+    width: 14%; 
+}
+
+table.table th:nth-child(3), /* 날짜 */
+table.table td:nth-child(3),
+table.table th:nth-child(4), /* 시간 */
+table.table td:nth-child(4) {
+    width: 7%; 
+}
+
+table.table th:nth-child(5), /* 국가 */
+table.table td:nth-child(5) {
+    width: 5%; /* 다섯 번째 열 너비 설정 */
+}
+
+table.table th:nth-child(6), /* MC */
+table.table td:nth-child(6),
+table.table th:nth-child(7), /* CC */
+table.table td:nth-child(7) {
+    width: 5%; 
+}
+
+table.table th:nth-child(8), /* 예상 인원 */
+table.table td:nth-child(8) {
+    width: 5%; 
+}
+
+table.table th:nth-child(9), /* 컨설턴트 인원 */
+table.table td:nth-child(9) {
+    width: 5%; 
+}
+
+table.table th:nth-child(10), /* 제출 시각 */
+table.table td:nth-child(10) {
+    width: 11%; 
+}
+
+table.table th:nth-child(11), /* 1차 승인 */
+table.table td:nth-child(11),
+table.table th:nth-child(12), /* 최종 승인 */
+table.table td:nth-child(12) {
+    width: 10%; 
+}
+
+/* 지문 분석 전문가 */
+
+#analystSection table.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#analystSection table.table th:nth-child(1), 
+#analystSection table.table td:nth-child(1) {
+    width: 12%;
+}
+
+#analystSection table.table th:nth-child(2), 
+#analystSection table.table td:nth-child(2) {
+    width: 12%;
+}
+
+#analystSection table.table th:nth-child(3), 
+#analystSection table.table td:nth-child(3) {
+    width: 12%;
+}
+
+#analystSection table.table th:nth-child(4), 
+#analystSection table.table td:nth-child(4) {
+    width: 12%;
+}
+
+#analystSection table.table th:nth-child(5), 
+#analystSection table.table td:nth-child(5) {
+    width: 12%;
+}
+
+#analystSection table.table th:nth-child(6), 
+#analystSection table.table td:nth-child(6) {
+    width: 12%;
+}
+
+/* 컨설턴트 권한 부여 */
+#consultantSection table.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#consultantSection table.table th:nth-child(1), 
+#consultantSection table.table td:nth-child(1) {
+    width: 12%;
+}
+
+#consultantSection table.table th:nth-child(2), 
+#consultantSection table.table td:nth-child(2) {
+    width: 12%;
+}
+
+#consultantSection table.table th:nth-child(3), 
+#consultantSection table.table td:nth-child(3) {
+    width: 12%;
+}
+
+#consultantSection table.table th:nth-child(4), 
+#consultantSection table.table td:nth-child(4) {
+    width: 12%;
+}
+
+#consultantSection table.table th:nth-child(5), 
+#consultantSection table.table td:nth-child(5) {
+    width: 12%;
+}
+
+#consultantSection table.table th:nth-child(6), 
+#consultantSection table.table td:nth-child(6) {
+    width: 12%;
+}

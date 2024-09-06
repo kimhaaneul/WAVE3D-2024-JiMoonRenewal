@@ -131,7 +131,429 @@ a {
     margin-left: 68%;
 }
 
+/* ================== 1025~1500px 해상도 ========================*/
+@media screen and (min-width : 1025px) and (max-width:1500px){
+
+    #contant1, #contant2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+    }
+    
+      #jm-contant-box1{
+        display: flex;
+        margin-top: 30px;
+        margin-right: 55%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 70%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: 8pt;
+        font-size: 28pt;
+    }
+    
+    #jm-contant-box2{
+        display: flex;
+        margin-right: 64%;
+    }
+    
+    #jm-contant-box3{
+        width: 5px;
+        background-color : #E95305;
+        height: 26px;
+        margin-right: 10px;
+    }
+    
+    #jm-contant-box4 img{
+        margin: 30px;
+        width: 50%;
+    }
+    
+    #jm-contant-box5{    
+        font-size: 15pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        width: 900px;
+    }
+    
+    #jm-box5-textbox{
+        padding: 20px;
+    }
+    
+    #jm-box5-textbox span{
+        font-family: "Pretendard Light";
+        line-height: 1.4;
+    }
+    
+    /* ============= 지문의 역사 ===========*/
+    
+    #contant2 #jm-contant-box2{
+        display: flex;
+        margin-right: 70%;
+        margin-top: 5%;
+    }
+    
+    #contant2 #jm-contant-box5{    
+        font-size: 14pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    #contant2 #jm-box5-textbox{
+        padding: 20px;
+        display: flex;
+    }
+    
+    #contant2 #jm-box5-textbox p{
+        font-family: "Pretendard Light";
+        margin-left: 3px;
+    }
+    
+    #jm-textbox-bold{
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    
+    #jm-list li{
+        margin: 20px;
+    }
+    
+    #jm-line{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 2px;
+        height: 25px;
+        background-color : #ffe600;
+    }
+    
+    #jm-contant-box6{
+        margin-bottom: 5%;
+    }
+    
+    #jm-contant-box6 span{
+        font-size: 10pt;
+        font-family: "Pretendard Light";
+        margin-left: 68%;
+    }
+
+}
+
+
+/* =================== 800~1024px까지 해상도 =======================*/
+
+@media screen and (min-width : 800px) and (max-width:1024px){
+    #contant1, #contant2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+    }
+    
+      #jm-contant-box1{
+        display: flex;
+        margin-top: 40px;
+        margin-right: 60%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 60%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: 6pt;
+        font-size: 24pt;
+    }
+
+
+    #jm-contant-box2{
+        display: flex;
+        margin-right: 67%;
+    }
+    
+    #jm-contant-box3{
+        width: 5px;
+        background-color : #E95305;
+        height: 26px;
+        margin-right: 10px;
+    }
+    
+    #jm-contant-box4 img{
+        margin: 30px;
+        width: 50%;
+    }
+    
+    #jm-contant-box5{    
+        font-size: 13pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        width: 800px;
+    }
+    
+    #jm-box5-textbox{
+        padding: 15px;
+    }
+    
+    #jm-box5-textbox span{
+        font-family: "Pretendard Light";
+        line-height: 1.3;
+    }
+    
+    /* ============= 지문의 역사 ===========*/
+    
+    #contant2 #jm-contant-box2{
+        display: flex;
+        margin-right: 74%;
+        margin-top: 5%;
+    }
+    
+    #contant2 #jm-contant-box5{    
+        font-size: 12pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    #contant2 #jm-box5-textbox{
+        padding: 20px;
+        display: flex;
+    }
+    
+    #contant2 #jm-box5-textbox p{
+        font-family: "Pretendard Light";
+        margin-left: 3px;
+    }
+    
+    #jm-textbox-bold{
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    
+    #jm-list li{
+        margin: 20px;
+    }
+    
+    #jm-line{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 2px;
+        height: 25px;
+        background-color : #ffe600;
+    }
+    
+    #jm-contant-box6{
+        margin-bottom: 5%;
+    }
+    
+    #jm-contant-box6 span{
+        font-size: 10pt;
+        font-family: "Pretendard Light";
+        margin-left: 63%;
+    }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* =================== ~799까지 해상도 =======================*/
+
+@media screen and (min-width : 350px) and (max-width:799px){
+    #contant1, #contant2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        text-align: center;
+        padding: 0px 20px;
+    }
+    
+      #jm-contant-box1{
+        display: flex;
+        margin-top: 40px;
+        margin-right: 55%;
+        align-items: center;
+        margin-bottom: 2%;
+    
+      }
+    
+      #jm-contant-box1 img{
+        width: 60%;
+      }
+    
+      #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: -6pt;
+        font-size: 16pt;
+        width: 200px;
+    }
+
+
+    #jm-contant-box2{
+        display: flex;
+        margin-right: 42%;
+    }
+    
+    #jm-contant-box3{
+        width: 5px;
+        background-color : #E95305;
+        height: 22px;
+        margin-left : 1px;
+    }
+
+    #jm-contant-box2 h2{
+        margin-left: -16%;
+        width: 200px;
+        font-size: 14pt;
+    }
+    
+    #jm-contant-box4 img{
+        margin-left: -1%;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    #jm-contant-box5{    
+        font-size: 13pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        width: 350px;
+    }
+    
+    #jm-box5-textbox{
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            padding: 20px;
+            text-align: center; 
+            gap: 10px; 
+    }
+    
+    #jm-box5-textbox span{
+        font-size: 10pt;
+        font-family: "Pretendard Light";
+        line-height: 1.3;
+        display: block;
+    }
+    
+    /* ============= 지문의 역사 ===========*/
+    #contant2 #jm-contant-box1 h2{
+        color : #E95305;
+        font-family: "Pretendard SemiBold";
+        text-align: center;
+        align-items: center;
+        margin-left: -6pt;
+        font-size: 16pt;
+        width: 200px;
+    }
+
+
+    #contant2 #jm-contant-box2{
+        display: flex;
+        margin-right: 42%;
+    }
+    
+    #contant2 #jm-contant-box3{
+        margin-top: 10%;
+        width: 5px;
+        background-color : #E95305;
+        height: 22px;
+        margin-left : 1px;
+    }
+
+    #contant2 #jm-contant-box2 h2{
+        margin-top: 10%;
+        margin-left: -28%;
+        width: 200px;
+        font-size: 14pt;
+    }
+
+    
+    #contant2 #jm-contant-box5{    
+        font-size: 12pt;
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    #contant2 #jm-box5-textbox{
+        padding: 20px;
+        display: flex;
+    }
+    
+    #contant2 #jm-box5-textbox p{
+        font-family: "Pretendard Light";
+        margin-left: 3px;
+    }
+    
+    #jm-textbox-bold{
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    
+    #jm-list li{
+        margin: 20px;
+    }
+    
+    #jm-line{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100px;
+        height: 2px;
+        background-color : #ffe600;
+    }
+    
+    #jm-contant-box6{
+        margin-top: -3%;
+        margin-bottom: 5%;
+        margin-left: -120%;
+    }
+    
+    #jm-contant-box6 span{
+        font-size: 8pt;
+        font-family: "Pretendard Light";
+    }
+
+}

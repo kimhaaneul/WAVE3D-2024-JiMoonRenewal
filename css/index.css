@@ -20,9 +20,10 @@ a {
 /* ======================== 기본설정 끝!! ====================*/
 
 /* ====================홈페이지 배너창(이벤트)======================== */
+
 .eventbanner {
     width: 100%;
-    height: 800px; 
+    height: 600px; 
     position: relative;
     overflow: hidden;
 }
@@ -71,7 +72,6 @@ a {
 }
 
 /* =================== 첫번째 지문 소개란 =====================*/
-
 
 #imgbox{
     width: 100%;
@@ -153,24 +153,6 @@ padding: 5px;
     margin: 4px;
     margin-bottom: 5%;
     }
-
-    @keyframes gradientFade {
-        from {
-            background: linear-gradient(to bottom, #ffffff, #ffffff);
-        }
-        to {
-            background: linear-gradient(to bottom, #feb47b, #fff5bb);
-        }
-    }
-    
-    @keyframes gradientFadeReverse {
-        from {
-            background: linear-gradient(to bottom, #feb47b, #fff5bb);
-        }
-        to {
-            background: linear-gradient(to bottom, #ffffff, #ffffff);
-        }
-    }
     
     .animate-gradient {
         animation: gradientFade 1s forwards;
@@ -248,5 +230,650 @@ padding: 5px;
     margin-left: 10px; 
 }
 
+/* ================== 1025~1500px 해상도 ========================*/
+@media screen and (min-width : 1025px ) and (max-width: 1500px){
 
+    
+    #contantbox0{
+        height: 70vh;;
+    }
+
+/* 첫번째 지문란 */
+
+    #contantbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        height: 90vh;
+        width: 100%;
+    }
+
+    #imgbox{
+        width: 100%;
+        height: 100%;
+        margin-left: 20%;
+    }
+    
+    #jimoonbtn {
+        width: 180px;
+        height: 45px;
+        font-size: 14pt;
+        background-color: #ffffff;
+        color: #ff7200;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+        cursor: pointer;
+        font-family: "Pretendard SemiBold";
+    
+    }
+    
+    #jimoonbtn:hover {
+        width: 200px;
+        height: 50px;
+        font-size: 15pt;
+        background-color: #ff7200;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+    }
+    
+
+    #imgbox {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        margin-right: 30px;
+    }
+    
+    #imgbox img{
+        width: 130%;
+    }
+    
+    #contantbox > div:last-child {
+        flex: 2;
+    }
+    
+    #contanttextbox{
+        margin-left: 2%;
+    }
+    
+    #contanttextbox img{
+        width: 40%;
+    }
+    
+    #contanttextbox h2{
+        color: #fc8600;
+        font-size: 25pt;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: "Pretendard SemiBold";
+    }
+    
+    #contanttextbox h3{
+    font-size: 16pt;
+    padding: 4px;
+    }
+    
+    #contanttextbox h4{
+    font-size: 12pt;
+    margin: 4px;
+    margin-bottom: 5%;
+    }
+        
+    .animate-gradient {
+         animation: gradientFade 1s forwards;
+    }
+        
+    .reverse-gradient {
+         animation: gradientFadeReverse 1s forwards;
+     }
+    
+   /* 정확한 지문 진단과 분석을 통한 나만의 지문 유형 11가지 분석 */ 
+
+   #contantbox2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F2F2F2;
+    
+}
+
+.jimoonbox {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+    width: 925px; /* 180 x 5 = 보여질 이미지 개수*/
+}
+
+#textbox {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 18pt;
+    line-height: 0.7;
+}
+
+#textbox img{
+    width: 12%;
+    padding: 10px;
+}
+
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10%;
+}
+
+.jimoonbox img {
+    flex-shrink: 0;
+    width: 185px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1); 
+    z-index: 1;
+}
+
+#left-button, #right-button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 30px;
+}
+
+#left-button {
+    margin-right: 8px;
+}
+
+#right-button {
+    margin-left: 8px; 
+}
+}
+
+/* =================== 800~1024px까지 해상도 ==========================*/
+@media screen and (min-width : 800px) and (max-width: 1024px){
+   
+    #contantbox0{
+        height: 30vh;;
+    }
+
+/* 첫번째 지문란 */
+
+    #contantbox {
+        margin-top:10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #imgbox{
+        width: 100%;
+        height: 100%;
+        margin-left: 10%;
+    }
+    
+    #jimoonbtn {
+        margin-top: -100%;
+        width: 160px;
+        height: 45px;
+        font-size: 13pt;
+        background-color: #ffffff;
+        color: #ff7200;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+        cursor: pointer;
+        font-family: "Pretendard SemiBold";
+    
+    }
+    
+    #jimoonbtn:hover {
+        background-color: #ff7200;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+    }
+    
+
+    #imgbox {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        margin-right: 30px;
+    }
+    
+    #imgbox img{
+        width: 125%;
+    }
+    
+    #contantbox > div:last-child {
+        flex: 2;
+    }
+    
+    #contanttextbox{
+        margin-left: -4%;
+    }
+    
+    #contanttextbox img{
+        margin-top: -5%;
+        width: 50%;
+    }
+    
+    #contanttextbox h2{
+        color: #fc8600;
+        font-size: 22pt;
+        margin-top: 10px;
+        font-family: "Pretendard SemiBold";
+    }
+    
+    #contanttextbox h3{
+    font-size: 13pt;
+    padding: 3px;
+    }
+    
+    #contanttextbox h4{
+    font-size: 11pt;
+    margin: 3px;
+    margin-bottom: 3%;
+    }
+        
+    .animate-gradient {
+         animation: gradientFade 1s forwards;
+    }
+        
+    .reverse-gradient {
+         animation: gradientFadeReverse 1s forwards;
+     }
+    
+   /* 정확한 지문 진단과 분석을 통한 나만의 지문 유형 11가지 분석 */ 
+
+   #contantbox2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F2F2F2;
+    
+}
+
+.jimoonbox {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+    width: 745px; /* 180 x 4 = 보여질 이미지 개수*/
+}
+
+#textbox {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 18pt;
+    line-height: 0.7;
+}
+
+#textbox img{
+    width: 12%;
+    padding: 10px;
+}
+
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10%;
+}
+
+.jimoonbox img {
+    flex-shrink: 0;
+    width: 185px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1); 
+    z-index: 1;
+}
+
+#left-button, #right-button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 30px;
+}
+
+#left-button {
+    margin-right: 8px;
+}
+
+#right-button {
+    margin-left: 8px; 
+}
+
+}
+
+/* =================== 581~799px까지 해상도 ==========================*/
+@media screen and (min-width : 581px) and (max-width: 799px){
+   
+    #contantbox0{
+        display:none;
+    }
+
+/* 첫번째 지문란 */
+
+    #contantbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #imgbox img{
+        display: none;
+    }
+    
+    #jimoonbtn {
+        margin-top: -100%;
+        width: 160px;
+        height: 45px;
+        font-size: 13pt;
+        background-color: #ffffff;
+        color: #ff7200;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+        cursor: pointer;
+        font-family: "Pretendard SemiBold";
+    
+    }
+    
+    #jimoonbtn:hover {
+        background-color: #ff7200;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+    }
+    
+
+    #contantbox > div:last-child {
+        flex: 2;
+    }
+    
+    #contanttextbox{
+        margin-left: -70%;
+    }
+    
+    #contanttextbox img{
+        width: 65%;
+    }
+    
+    #contanttextbox h2{
+        color: #fc8600;
+        font-size: 22pt;
+        margin-top: 10px;
+        font-family: "Pretendard SemiBold";
+    }
+    
+    #contanttextbox h3{
+    font-size: 13pt;
+    padding: 3px;
+    }
+    
+    #contanttextbox h4{
+    font-size: 11pt;
+    margin: 3px;
+    margin-bottom: 3%;
+    }
+        
+    .animate-gradient {
+         animation: gradientFade 1s forwards;
+    }
+        
+    .reverse-gradient {
+         animation: gradientFadeReverse 1s forwards;
+     }
+    
+   /* 정확한 지문 진단과 분석을 통한 나만의 지문 유형 11가지 분석 */ 
+
+   #contantbox2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F2F2F2;
+    
+}
+
+#contantbox2 h2{
+    font-size: 18pt;
+}
+
+.jimoonbox {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+    width:365px; /* 180 x 2 = 보여질 이미지 개수*/
+}
+
+#textbox {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 18pt;
+    line-height: 0.7;
+}
+
+#textbox img{
+    width: 20%;
+    padding: 10px;
+}
+
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10%;
+}
+
+.jimoonbox img {
+    flex-shrink: 0;
+    width: 180px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1); 
+    z-index: 1;
+}
+
+#left-button, #right-button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 30px;
+}
+
+#left-button {
+    margin-right: 8px;
+}
+
+#right-button {
+    margin-left: 8px; 
+}
+
+}
+
+/* =================== ~580까지 해상도 ==========================*/
+@media screen and (max-width: 580px){
+   
+    #contantbox0{
+        display:none;
+    }
+
+/* 첫번째 지문란 */
+
+    #contantbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #imgbox img{
+        display: none;
+    }
+    
+    #jimoonbtn {
+        margin-top: -100%;
+        width: 160px;
+        height: 45px;
+        font-size: 13pt;
+        background-color: #ffffff;
+        color: #ff7200;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+        cursor: pointer;
+        font-family: "Pretendard SemiBold";
+    
+    }
+    
+    #jimoonbtn:hover {
+        background-color: #ff7200;
+        color: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #ff7200;
+    }
+    
+
+    #contantbox > div:last-child {
+        flex: 2;
+    }
+    
+    #contanttextbox{
+        margin-left: -90%;
+    }
+    
+    #contanttextbox img{
+        width: 80%;
+    }
+    
+    #contanttextbox h2{
+        color: #fc8600;
+        font-size: 22pt;
+        margin-top: 10px;
+        font-family: "Pretendard SemiBold";
+    }
+    
+    #contanttextbox h3{
+    font-size: 12pt;
+    padding: 3px;
+    }
+    
+    #contanttextbox h4{
+    font-size: 11pt;
+    margin: 3px;
+    margin-bottom: 3%;
+    }
+        
+   /* 정확한 지문 진단과 분석을 통한 나만의 지문 유형 11가지 분석 */ 
+
+   #contantbox2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F2F2F2;
+    
+}
+
+#contantbox2 h2{
+    font-size: 14pt;
+}
+
+.jimoonbox {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+    width:185px; /* 180 x 1 = 보여질 이미지 개수*/
+}
+
+#textbox {
+    margin-top: 10%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 18pt;
+    line-height: 0.7;
+}
+
+#textbox img{
+    width: 20%;
+    padding: 10px;
+}
+
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10%;
+}
+
+.jimoonbox img {
+    flex-shrink: 0;
+    width: 180px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1); 
+    z-index: 1;
+}
+
+#left-button, #right-button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+}
+
+#left-button {
+    margin-right: 8px;
+}
+
+#right-button {
+    margin-left: 8px; 
+}
+
+}
 

@@ -18,23 +18,23 @@ include_once("header2.php");
 
     <link href="signin.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #282f39;
-        }
+    body {
+        background-color: #282f39;
+    }
 
-        @media (min-width: 992px) {
-            #login {
-                margin-top: -450px;
-                margin-left: 83px;
-            }
+    @media (min-width: 992px) {
+        #login {
+            margin-top: -450px;
+            margin-left: 83px;
         }
+    }
 
-        @media (max-width: 1200px) {
-            #login {
-                margin-top: -445px;
-                margin-left: 91px;
-            }
+    @media (max-width: 1200px) {
+        #login {
+            margin-top: -445px;
+            margin-left: 91px;
         }
+    }
     </style>
 </head>
 
@@ -46,34 +46,34 @@ include_once("header2.php");
         <div class="container" id="login">
             <?php
             if (!isset($_SESSION['id'])) { ?>
-                <form action="login-check.php" method="post" encType="multiplart/form-data">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <input type="radio" id="consultant" name="role" value="consultant" required>
-                            <label for="consultant">컨설턴트</label>
-                            <input type="radio" id="analyst" name="role" value="analyst" required>
-                            <label for="analyst">지문분석전문가</label>
-                        </div>
-                        <div class="col-md-8"></div>
-                        <div class="col-md-4" style="margin-top: 5px;">
-                            <label for="id" class="sr-only">ID</label>
-                            <input type="text" id="id" name="id" class="form-control" placeholder="ID" required autofocus>
-                        </div>
-                        <div class="col-md-8"></div>
-                        <div class="col-md-4" style="margin-top: 5px;">
-                            <label for="pw" class="sr-only">Password</label>
-                            <input type="password" id="pw" name="pw" class="form-control" placeholder="Password" required>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
-                        </div>
-                        <div class="col-md-12" style="margin-top: 10px;">
-                            <a href="BNS_contract.php">회원가입</a> |
-                            <a href="findID.php">아이디 찾기</a> |
-                            <a href="findPW.php">비밀번호 찾기</a>
-                        </div>
+            <form action="login-check.php" method="post" encType="multiplart/form-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="radio" id="consultant" name="role" value="consultant" required>
+                        <label for="consultant">컨설턴트</label>
+                        <input type="radio" id="analyst" name="role" value="analyst" required>
+                        <label for="analyst">지문분석전문가</label>
                     </div>
-                </form>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4" style="margin-top: 5px;">
+                        <label for="id" class="sr-only">ID</label>
+                        <input type="text" id="id" name="id" class="form-control" placeholder="ID" required autofocus>
+                    </div>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4" style="margin-top: 5px;">
+                        <label for="pw" class="sr-only">Password</label>
+                        <input type="password" id="pw" name="pw" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 10px;">
+                        <a href="JOIN_contract.php">회원가입</a> |
+                        <a href="findID.php">아이디 찾기</a> |
+                        <a href="findPW.php">비밀번호 찾기</a>
+                    </div>
+                </div>
+            </form>
             <?php } else {
                 $id = $_SESSION['id'];
                 echo "<div class='text-left'>";
